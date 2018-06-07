@@ -30,6 +30,6 @@
 
         <?= $this->fetch('content') ?>
 
-    <?php echo $this->Element('footer'); ?>
+    <?php echo $this->Element('front_footer'); ?>
 </body>
 </html>

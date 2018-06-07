@@ -17,6 +17,8 @@ namespace App\Controller;
 use Cake\Controller\Controller;
 use Cake\Event\Event;
 use App\Controller\NoticiasController;
+use Cake\Core\Configure;
+use Cake\ORM\TableRegistry;
 
 
 /**
@@ -41,6 +43,10 @@ class AppController extends Controller
      */
     public function initialize()
     {
+        $NewsTable = TableRegistry::get('News');
+        $news = $NewsTable->find('all',['order'=>'id DESC','limit'=>2]);
+        $this->set(compact('news'));
+        
         parent::initialize();
 
         $this->loadComponent('RequestHandler', [
@@ -78,6 +84,9 @@ class AppController extends Controller
     {
         $this->set('username', $this->Auth->user('username'));
         
+        Configure::write(‘debug’, false);
+
+
     
     }
 

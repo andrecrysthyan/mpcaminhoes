@@ -328,7 +328,7 @@ line-height: 20px;
     background-color: #fb3c03;
     padding: 0px 15px;
     color: white;
-    font-weight: bold;
+   
     font-size: 14px;
     font-family: 'bebasneue';
     font-size: 20px;
@@ -343,7 +343,7 @@ line-height: 20px;
 .mostra-veiculos p{
     color: #A3A3A3;
     font-size: 14px;
-    line-height: 3;
+    line-height: 2;
 }
 
 .mostra-veiculos{

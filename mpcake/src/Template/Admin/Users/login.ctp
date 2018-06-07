@@ -1,30 +1,23 @@
-<?php
-/**
- * @var \App\View\AppView $this
- * @var \App\Model\Entity\User $user
- */
-?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-       
-        <li><?= $this->Html->link(__('New User'), ['controller' => 'Users', 'action' => 'add']) ?></li>
-        <li><?= $this->Html->link(__('Remember Password'), ['controller' => 'Users', 'action' => 'rememberPassword'])?></li>
-        
-    </ul>
-</nav>
-<div class="users form large-9 medium-8 columns content">
-    <?= $this->Form->create() ?>
+<style type="text/css">
+    .users.form{
+        display: inline-block;
+    }
+    legend{
+        font-size: 17px;
+    }
+    .btn-primary{
+        margin-top: 5px;
+    }
+</style>
+<div class="col-md-3"></div>
+<div class="users form">
+<?= $this->Form->create(null, array('role' => 'form')) ?>
     <fieldset>
-        <legend><?= __('Login') ?></legend>
-        <?php
-           
-            echo $this->Form->control('username');
-          
-            echo $this->Form->control('password');
-            
-        ?>
+        <legend><?= __('Please enter your username and password') ?></legend>
+        <?= $this->Form->control('email',['class' => 'form-control']) ?>
+        <?= $this->Form->control('password',['class' => 'form-control']) ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
-    <?= $this->Form->end() ?>
+<?= $this->Form->button(__('Login'),['class'=>"btn btn-primary"]); ?>
+<?= $this->Form->end() ?>
 </div>
+<div class="col-md-3"></div>

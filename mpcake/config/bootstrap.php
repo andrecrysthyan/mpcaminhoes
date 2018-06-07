@@ -11,12 +11,17 @@
  * @link          https://cakephp.org CakePHP(tm) Project
  * @since         0.10.8
  * @license       https://opensource.org/licenses/mit-license.php MIT License
+
+
  */
 
 /*
  * Configure paths required to find CakePHP + general filepath constants
  */
+
+
 require __DIR__ . '/paths.php';
+
 
 /*
  * Bootstrap CakePHP.
@@ -43,6 +48,9 @@ use Cake\Log\Log;
 use Cake\Mailer\Email;
 use Cake\Utility\Inflector;
 use Cake\Utility\Security;
+
+
+
 
 /**
  * Uncomment block of code below if you want to use `.env` file during development.
@@ -212,6 +220,23 @@ Type::build('timestamp')
  * Only try to load DebugKit in development mode
  * Debug Kit should not be installed on a production system
  */
-if (Configure::read('debug')) {
-    Plugin::load('DebugKit', ['bootstrap' => true]);
-}
+#if (Configure::read('debug')) {
+
+ //Plugin::load('DebugKit', ['bootstrap' => true]);
+#}
+Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
+Configure::write('Theme', [
+    'title' => 'AdminLTE',
+
+    'logo' => [
+        'mini' => '<b>A</b>LT',
+        'large' => '<b>Admin</b>LTE'
+    ],
+    'login' => [
+        'show_remember' => false,
+        'show_register' => false,
+        'show_social' => false
+    ],
+    'folder' => ROOT,
+    'skin' => 'blue' // default is 'blue'
+]);
