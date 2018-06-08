@@ -61,12 +61,14 @@ class ImagesVehicleTable extends Table
                     var_dump($data);
                     $extension = pathinfo($data['name'], PATHINFO_EXTENSION);
                     $tmp = tempnam(sys_get_temp_dir(), 'upload') . '.' . $extension;
-                    $size = new \Imagine\Image\Box(500, 450);
+                  //  $size = new \Imagine\Image\Box(500, 450);
+                    $size = new \Imagine\Image\Box(480, 260);
                     $mode = \Imagine\Image\ImageInterface::THUMBNAIL_INSET;
                     $imagine = new \Imagine\Gd\Imagine();
                     $imagine->open($data['tmp_name'])
                         ->thumbnail($size, $mode)
-                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(500, 450))
+                       // ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(500, 450))
+                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(480, 260))
                         ->save($tmp);
 
                     // Now return the original *and* the thumbnail
@@ -105,7 +107,7 @@ class ImagesVehicleTable extends Table
         $validator->allowEmpty('image', true);
 
         $validator->add('image', 'fileAboveMinHeight', [
-            'rule' => ['isAboveMinHeight', 500],
+            'rule' => ['isAboveMinHeight', 260],
             'message' => 'There was no file found to upload',
             'provider' => 'upload',
             /*'on' => function($context) {
