@@ -30,6 +30,7 @@
             echo $this->Form->input('brand');
             echo $this->Form->input('model');
             echo $this->Form->input('year');
+            echo $this->Form->input('promotion');
             echo $this->Form->input('details');
             echo $this->Form->input('category_id', ['options' => $categories]);
           ?>

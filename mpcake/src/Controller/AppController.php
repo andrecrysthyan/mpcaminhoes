@@ -44,8 +44,10 @@ class AppController extends Controller
     public function initialize()
     {
         $NewsTable = TableRegistry::get('News');
+        $CategoriesTable = TableRegistry::get('Categories');
         $news = $NewsTable->find('all',['order'=>'id DESC','limit'=>2]);
-        $this->set(compact('news'));
+        $categories = $CategoriesTable->find('all',['order'=>'title ASC']);
+        $this->set(compact('news','categories'));
         
         parent::initialize();
 
@@ -53,7 +55,7 @@ class AppController extends Controller
             'enableBeforeRedirect' => false,
         ]);
         $this->loadComponent('Flash');
-        $this->loadComponent('Auth', [
+        /*$this->loadComponent('Auth', [
             'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -70,7 +72,7 @@ class AppController extends Controller
                     'controller' => 'Users',
                     'action' => 'login'
                 ]
-            ]);
+            ]);*/
 
         /*
          * Enable the following components for recommended CakePHP security settings.
@@ -82,11 +84,9 @@ class AppController extends Controller
 
     public function beforeFilter(Event $event)
     {
-        $this->set('username', $this->Auth->user('username'));
+        //$this->set('username', $this->Auth->user('username'));
         
-        Configure::write(‘debug’, false);
-
-
+        //Configure::write(‘debug’, false);
     
     }
 

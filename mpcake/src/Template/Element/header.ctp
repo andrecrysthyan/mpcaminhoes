@@ -50,10 +50,9 @@
 	                			<li class="dropdown">
           							<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estoques<span class="caret"></span></a>
 					    			<ul class="dropdown-menu">
-					        			<li><a href="" class="tamanho-drop">Caminhões</a></li>
-					        			<li><a href="" class="tamanho-drop">Carretas</a></li>
-					 					<li><a href="" class="tamanho-drop">Carros</a></li>
-					    				<li><a href="" class="tamanho-drop">Ônibus</a></li>
+					    				<?php foreach($categories as $category):?>
+					        			<li><a href="<?=$this->Url->build(['controller'=>'vehicles','action'=>'by_categoy',$category['id']])?>" class="tamanho-drop"><?=$category['title']?></a></li>
+					        			<?php endforeach;?>
 					   				</ul>
         						</li>	
 	                			<li><a href="">empresa</a></li>

@@ -1,7 +1,7 @@
 <?php
-namespace App\Controller\Admin;
+namespace App\Controller;
 
-use App\Controller\Admin\AppController;
+use App\Controller\AppController;
 
 /**
  * Vehicles Controller
@@ -42,6 +42,17 @@ class VehiclesController extends AppController
         ]);
 
         $this->set('vehicle', $vehicle);
+    }
+
+    public function byCategoy($id = null)
+    {
+        /*$this->paginate = [
+            'contain' => ['ImagesVehicle']
+        ];*/
+        $query = $this->Vehicles->find('all')->where(['category_id' => $id]);
+        $vehicles = $this->paginate($query);
+
+        $this->set(compact('vehicles'));
     }
 
     /**
