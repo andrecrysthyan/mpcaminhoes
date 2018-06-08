@@ -19,6 +19,7 @@ use Cake\Http\Exception\ForbiddenException;
 use Cake\Http\Exception\NotFoundException;
 use Cake\View\Exception\MissingTemplateException;
 use Cake\Event\Event;
+use Cake\ORM\TableRegistry;
 
 /**
  * Static content controller
@@ -60,7 +61,9 @@ class PagesController extends AppController
         if (!empty($path[1])) {
             $subpage = $path[1];
         }
-        $this->set(compact('page', 'subpage'));
+        $VehiclesTable = TableRegistry::get('Vehicles');
+        $Vehicles = $VehiclesTable->find('all',['order'=>'id DESC','limit'=>8])->contain('ImagesVehicle')->where(['promotion'=>true]);
+        $this->set(compact('page', 'subpage','Vehicles'));
 
         try {
             $this->render(implode('/', $path));

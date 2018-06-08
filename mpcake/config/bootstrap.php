@@ -222,7 +222,8 @@ Type::build('timestamp')
  */
 #if (Configure::read('debug')) {
 
- //Plugin::load('DebugKit', ['bootstrap' => true]);
+Plugin::load('DebugKit', ['bootstrap' => true, 'routes' => true]);
+
 #}
 Plugin::load('AdminLTE', ['bootstrap' => true, 'routes' => true]);
 Configure::write('Theme', [

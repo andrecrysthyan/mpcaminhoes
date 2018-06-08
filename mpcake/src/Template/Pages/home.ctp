@@ -37,18 +37,20 @@
 			
 			<section id="dg-container" class="dg-container">
 				<div class="dg-wrapper">
-					<a href="#"><?php echo $this->Html->image('promo1.png', ['title' => 'Promoção da semana']) ?><div>
-Carreta Caçamba Basculante Ls Facchini 2011 20m³ - 
-<span class="preco-promocao">R$ 49.900,00</span>
+					<?php foreach($Vehicles as $vehicle):?>
+						<?php
+						//debug($vehicle);
+						if(!empty($vehicle->images_vehicle)){
+							debug($vehicle->images_vehicle[0]->image);
+						?>
+						<a href="#"><?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[0]->image}", ['title' => 'Promoção da semana']) ?><div>
+<?=$vehicle['name']?> - 
+<span class="preco-promocao">R$ <?=$vehicle['value']?></span>
 </div></a>
-					<a href="#"><?php echo $this->Html->image('promo2.png', ['title' => 'Promoção da semana']) ?><div>
-Carreta Caçamba Basculante Ls Facchini 2011 20m³ - 
-<span class="preco-promocao">R$ 49.900,00</span>
-</div></a>
-					<a href="#"><?php echo $this->Html->image('promo3.png', ['title' => 'Promoção da semana']) ?><div>
-Carreta Caçamba Basculante Ls Facchini 2011 20m³ - 
-<span class="preco-promocao">R$ 49.900,00</span>
-</div></a>
+					<?php }?>
+					<?php endforeach;?>
+					
+					
 					<!--<a href="#"><?php echo $this->Html->image('4.jpg', ['title' => 'Promoção da semana']) ?><div>http://lifeingreenville.com/</div></a>
 					<a href="#"><?php echo $this->Html->image('5.jpg', ['title' => 'Promoção da semana']) ?><div>http://circlemeetups.com/</div></a>
 					<a href="#"><?php echo $this->Html->image('6.jpg', ['title' => 'Promoção da semana']) ?><div>http://www.castirondesign.com/</div></a>

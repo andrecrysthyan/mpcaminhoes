@@ -16,7 +16,7 @@ namespace App\Controller;
 
 use Cake\Controller\Controller;
 use Cake\Event\Event;
-use App\Controller\NoticiasController;
+//use App\Controller\NoticiasController;
 use Cake\Core\Configure;
 use Cake\ORM\TableRegistry;
 
