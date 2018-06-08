@@ -85,7 +85,12 @@ function showReadMore($string){
 		<h2>Notícias do transporte</h2>
 		<?php foreach ($news as $news): ?>
 		<p><figure>
-					<img title="" alt="" class="col-md-6 retira-padding" src="<?php echo $this->request->base ?>/files/News/image/<?= h($news->image) ?>">
+			
+					<?php 
+	 				echo $this->Html->image('/files/News/image/{$news->image}', ['title' => 'Economizar gasolina', 'class' => 'col-md-6 retira-padding'])
+					?>
+
+					<!--<img title="" alt="" class="col-md-6 retira-padding" src="<?php echo $this->request->base ?>/files/News/image/{$news->image}">-->
 			<!--<?php 
 	 				echo $this->Html->image('<?= h($news->image) ?>', ['title' => 'Economizar gasolina', 'class' => 'col-md-6 retira-padding'])
 					?>--></figure>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 08-Jun-2018 às 16:11
+-- Generation Time: 09-Jun-2018 às 00:53
 -- Versão do servidor: 10.1.32-MariaDB
 -- PHP Version: 7.0.30
 
@@ -69,9 +69,10 @@ INSERT INTO `images_vehicle` (`id`, `image`, `vehicle_id`, `created`, `modified`
 (2, '3f915e671a70f7598108e40b0fa1ba4b.png', 1, '2018-06-07 16:09:46', '2018-06-07 16:09:46'),
 (3, 'db631f3f009e32b144327d63a75194bb.png', 1, '2018-06-07 16:10:15', '2018-06-07 16:10:15'),
 (4, '2ab1fc0ef2db7113225ddf29db72c393.jpg', 1, '2018-06-07 23:42:10', '2018-06-07 23:42:10'),
-(12, '08803cda56bc7766ddcfb99322b85e0c.png', 103, '2018-06-08 13:02:13', '2018-06-08 13:42:16'),
-(13, 'c99ba07f9ab3caf6af57a361f80f6128.png', 104, '2018-06-08 13:16:39', '2018-06-08 14:03:05'),
-(14, 'eaeed640501f405327b17cf088ddaa8f.png', 104, '2018-06-08 13:47:44', '2018-06-08 13:49:37');
+(12, '4e0ad1326c5d0f3680ba5c3d1b2759be.png', 103, '2018-06-08 13:02:13', '2018-06-08 21:19:10'),
+(13, '2604df32b2f92c8566fb3dc652800168.jpg', 104, '2018-06-08 13:16:39', '2018-06-08 21:10:23'),
+(14, '522a347dd0199b02156e1720e51de753.jpg', 104, '2018-06-08 13:47:44', '2018-06-08 21:10:08'),
+(15, '399dbc3ab93f41b38cb78fd195e6f42f.jpg', 106, '2018-06-08 21:15:54', '2018-06-08 21:15:54');
 
 -- --------------------------------------------------------
 
@@ -147,7 +148,9 @@ CREATE TABLE `vehicles` (
 INSERT INTO `vehicles` (`id`, `name`, `value`, `brand`, `model`, `year`, `promotion`, `details`, `category_id`, `created`, `modified`) VALUES
 (1, 'Felipe Rodrigues', '58.50', 'TESTE', 'TESTE', 2030, 0, 'TESTEEEEEEE', 3, '2018-06-07 16:04:59', '2018-06-07 16:04:59'),
 (103, 'Ferrari teste andre', '120000.00', 'ferrari', 'f220', 2018, 1, 'ferrari lalal', 7, '2018-06-08 13:01:36', '2018-06-08 13:01:36'),
-(104, 'teste ferrari8', '255000.00', 'ferrari', 'f350', 2017, 1, 'ferrari lalala', 7, '2018-06-08 13:15:38', '2018-06-08 13:18:20');
+(104, 'teste ferrari8', '255000.00', 'ferrari', 'f350', 2017, 1, 'ferrari lalala', 7, '2018-06-08 13:15:38', '2018-06-08 13:18:20'),
+(105, 'ferrari teste 3', '300000.00', 'ferrari', 'f400', 2018, 0, 'ferari lalala', 7, '2018-06-08 21:12:25', '2018-06-08 21:12:25'),
+(106, 'ferrari teste 3 lala', '255000.00', 'testeferrari', 'ferrariii', 2018, 0, 'teste', 7, '2018-06-08 21:15:24', '2018-06-08 21:15:24');
 
 --
 -- Indexes for dumped tables
@@ -199,7 +202,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `images_vehicle`
 --
 ALTER TABLE `images_vehicle`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `news`
@@ -217,7 +220,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `vehicles`
 --
 ALTER TABLE `vehicles`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- Constraints for dumped tables
