@@ -63,8 +63,9 @@ class PagesController extends AppController
         }
         $VehiclesTable = TableRegistry::get('Vehicles');
        // $Vehicles = $VehiclesTable->find('all',['order'=>'id DESC','limit'=>8])->contain('ImagesVehicle')->where(['promotion'=>true]);
-        $Vehicles = $VehiclesTable->find('all',['order'=>'id DESC'])->contain('ImagesVehicle')->where(['promotion'=>true]);
-        $this->set(compact('page', 'subpage','Vehicles'));
+        $Vehicles_promo = $VehiclesTable->find('all',['order'=>'id DESC'])->contain('ImagesVehicle')->where(['promotion'=>true]);
+        $Vehicles = $VehiclesTable->find('all',['order'=>'id DESC'])->contain('ImagesVehicle');
+        $this->set(compact('page', 'subpage','Vehicles_promo','Vehicles'));
 
         try {
             $this->render(implode('/', $path));

@@ -37,13 +37,13 @@
 			
 			<section id="dg-container" class="dg-container">
 				<div class="dg-wrapper">
-					<?php foreach($Vehicles as $vehicle):?>
+					<?php foreach($Vehicles_promo as $vehicle):?>
 						<?php
 						//debug($vehicle);
 						if(!empty($vehicle->images_vehicle)){
-							debug($vehicle->images_vehicle[0]->image);
+							//debug($vehicle->images_vehicle[0]->image);
 						?>
-						<a href="#"><?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[0]->image}", ['title' => 'Promoção da semana']) ?><div>
+						<a href="<?=$this->Url->build(['controller'=>'Vehicles','action'=>'view',$vehicle->id])?>"><?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[0]->image}", ['title' => 'Promoção da semana']) ?><div>
 <?=$vehicle['name']?> - 
 <span class="preco-promocao">R$ <?=$vehicle['value']?></span>
 </div></a>
@@ -74,109 +74,31 @@
 <div class="container">
 	<div class="col-md-12 retira-padding mostra-veiculos">
 		<div class="row">
-		<a href=""><div class="col-md-4 bloco-veiculo">
-			<?php echo $this->Html->image('veiculo.png', ['title' => 'Veiculo1', 'class' => 'img-responsive']) ?>
-			<div class="col-md-12 retira-padding bloco-nome-preco">
-			<div class= "col-md-12 retira-padding nome-veiculo"><h2>Carreta Caçamba Basculante Ls Facchini 2011 20m³</h2></div>
-			<span class="col-md-12 retira-padding preco-veiculo">R$ 115.900</span>
-		</div>
-		<div class="col-md-12 retira-padding bloco-data-tipo">
-			<p class="col-md-12"><i class="fas fa-truck-moving"></i>RANDON Bi Caçamba Basculante</p>
-			<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: 2011</p>
-		</div>
-		</div></a>
-		<a href=""><div class="col-md-4 bloco-veiculo">
-			<?php echo $this->Html->image('veiculo.png', ['title' => 'Veiculo1', 'class' => 'img-responsive']) ?>
-			<div class="col-md-12 retira-padding bloco-nome-preco">
-			<div class= "col-md-12 retira-padding nome-veiculo"><h2>Carreta Caçamba Basculante Ls Facchini 2011 20m³</h2></div>
-			<span class="col-md-12 retira-padding preco-veiculo">R$ 115.900</span>
-		</div>
-		<div class="col-md-12 retira-padding bloco-data-tipo">
-			<p class="col-md-12"><i class="fas fa-truck-moving"></i>RANDON Bi Caçamba Basculante</p>
-			<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: 2011</p>
-		</div>
-		</div></a>
-		<a href=""><div class="col-md-4 bloco-veiculo">
-			<?php echo $this->Html->image('veiculo.png', ['title' => 'Veiculo1', 'class' => 'img-responsive']) ?>
-			<div class="col-md-12 retira-padding bloco-nome-preco">
-			<div class= "col-md-12 retira-padding nome-veiculo"><h2>Carreta Caçamba Basculante Ls Facchini 2011 20m³</h2></div>
-			<span class="col-md-12 retira-padding preco-veiculo">R$ 115.900</span>
-		</div>
-		<div class="col-md-12 retira-padding bloco-data-tipo">
-			<p class="col-md-12"><i class="fas fa-truck-moving"></i>RANDON Bi Caçamba Basculante</p>
-			<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: 2011</p>
-		</div>
-		</div></a>
-	</div>
-	<div class="row">
-		<a href=""><div class="col-md-4 bloco-veiculo">
-			<?php echo $this->Html->image('veiculo.png', ['title' => 'Veiculo1', 'class' => 'img-responsive']) ?>
-			<div class="col-md-12 retira-padding bloco-nome-preco">
-			<div class= "col-md-12 retira-padding nome-veiculo"><h2>Carreta Caçamba Basculante Ls Facchini 2011 20m³</h2></div>
-			<span class="col-md-12 retira-padding preco-veiculo">R$ 115.900</span>
-		</div>
-		<div class="col-md-12 retira-padding bloco-data-tipo">
-			<p class="col-md-12"><i class="fas fa-truck-moving"></i>RANDON Bi Caçamba Basculante</p>
-			<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: 2011</p>
-		</div>
-		</div></a>
-		<a href=""><div class="col-md-4 bloco-veiculo">
-			<?php echo $this->Html->image('veiculo.png', ['title' => 'Veiculo1', 'class' => 'img-responsive']) ?>
-			<div class="col-md-12 retira-padding bloco-nome-preco">
-			<div class= "col-md-12 retira-padding nome-veiculo"><h2>Carreta Caçamba Basculante Ls Facchini 2011 20m³</h2></div>
-			<span class="col-md-12 retira-padding preco-veiculo">R$ 115.900</span>
-		</div>
-		<div class="col-md-12 retira-padding bloco-data-tipo">
-			<p class="col-md-12"><i class="fas fa-truck-moving"></i>RANDON Bi Caçamba Basculante</p>
-			<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: 2011</p>
-		</div>
-		</div></a>
-		<a href=""><div class="col-md-4 bloco-veiculo">
-			<?php echo $this->Html->image('veiculo.png', ['title' => 'Veiculo1', 'class' => 'img-responsive']) ?>
-			<div class="col-md-12 retira-padding bloco-nome-preco">
-			<div class= "col-md-12 retira-padding nome-veiculo"><h2>Carreta Caçamba Basculante Ls Facchini 2011 20m³</h2></div>
-			<span class="col-md-12 retira-padding preco-veiculo">R$ 115.900</span>
-		</div>
-		<div class="col-md-12 retira-padding bloco-data-tipo">
-			<p class="col-md-12"><i class="fas fa-truck-moving"></i>RANDON Bi Caçamba Basculante</p>
-			<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: 2011</p>
-		</div>
-		</div></a>
-	</div>
-	<div class="row">
-		<a href=""><div class="col-md-4 bloco-veiculo">
-			<?php echo $this->Html->image('veiculo.png', ['title' => 'Veiculo1', 'class' => 'img-responsive']) ?>
-			<div class="col-md-12 retira-padding bloco-nome-preco">
-			<div class= "col-md-12 retira-padding nome-veiculo"><h2>Carreta Caçamba Basculante Ls Facchini 2011 20m³</h2></div>
-			<span class="col-md-12 retira-padding preco-veiculo">R$ 115.900</span>
-		</div>
-		<div class="col-md-12 retira-padding bloco-data-tipo">
-			<p class="col-md-12"><i class="fas fa-truck-moving"></i>RANDON Bi Caçamba Basculante</p>
-			<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: 2011</p>
-		</div>
-		</div></a>
-		<a href=""><div class="col-md-4 bloco-veiculo">
-			<?php echo $this->Html->image('veiculo.png', ['title' => 'Veiculo1', 'class' => 'img-responsive']) ?>
-			<div class="col-md-12 retira-padding bloco-nome-preco">
-			<div class= "col-md-12 retira-padding nome-veiculo"><h2>Carreta Caçamba Basculante Ls Facchini 2011 20m³</h2></div>
-			<span class="col-md-12 retira-padding preco-veiculo">R$ 115.900</span>
-		</div>
-		<div class="col-md-12 retira-padding bloco-data-tipo">
-			<p class="col-md-12"><i class="fas fa-truck-moving"></i>RANDON Bi Caçamba Basculante</p>
-			<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: 2011</p>
-		</div>
-		</div></a>
-		<a href=""><div class="col-md-4 bloco-veiculo">
-			<?php echo $this->Html->image('veiculo.png', ['title' => 'Veiculo1', 'class' => 'img-responsive']) ?>
-			<div class="col-md-12 retira-padding bloco-nome-preco">
-			<div class= "col-md-12 retira-padding nome-veiculo"><h2>Carreta Caçamba Basculante Ls Facchini 2011 20m³</h2></div>
-			<span class="col-md-12 retira-padding preco-veiculo">R$ 115.900</span>
-		</div>
-		<div class="col-md-12 retira-padding bloco-data-tipo">
-			<p class="col-md-12"><i class="fas fa-truck-moving"></i>RANDON Bi Caçamba Basculante</p>
-			<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: 2011</p>
-		</div>
-		</div></a>
+			 <?php $x = 0;?>
+			<?php foreach($Vehicles as $vehicle):?>
+						<?php
+						//debug($vehicle);
+						if(!empty($vehicle->images_vehicle)){
+							//debug($vehicle->images_vehicle[0]->image);
+						?>
+						 <?php if($x!=0 && $x%3==0){
+				            echo "</div>\n<div class='row'>";
+				          }
+				          ?>
+						<a href="<?=$this->Url->build(['controller'=>'Vehicles','action'=>'view',$vehicle->id])?>"><div class="col-md-4 bloco-veiculo">
+						<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[0]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
+						<div class="col-md-12 retira-padding bloco-nome-preco">
+						<div class= "col-md-12 retira-padding nome-veiculo"><h2><?=$vehicle->name?></h2></div>
+						<span class="col-md-12 retira-padding preco-veiculo">R$ <?=$vehicle['value']?></span>
+					</div>
+					<div class="col-md-12 retira-padding bloco-data-tipo">
+						<p class="col-md-12"><i class="fas fa-truck-moving"></i><?=$vehicle->model?></p>
+						<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: <?=$vehicle->year?></p>
+					</div>
+					</div></a>
+					<?php ++$x;}?>
+			<?php endforeach;?>
+		
 	</div>
 	</div>
 
