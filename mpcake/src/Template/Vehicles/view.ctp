@@ -10,34 +10,24 @@
 				<?php echo $this->Html->image("/files/Vehicles/image/croped-{$vehicle->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
 			</div>
 			<div class="row">
-				<!-- meu pai do ceu me recuso a corrigir isso aqui faz um loop sua anta do caralho santa mae de deus ce come bosta?-->
-				<div class="col-md-3">
-					<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[1]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
+			 <?php $x = 0;?>
+			<?php foreach($vehicle->images_vehicle as $image):?>
+						<?php
+						//debug($vehicle);
+						if(!empty($vehicle->images_vehicle)){
+							//debug($vehicle->images_vehicle[0]->image);
+						?>
+						 <?php if($x!=0 && $x%4==0){
+				            echo "</div>\n<div class='row'>";
+				          }
+				          ?>
+						<div class="col-md-3">
+							<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$image->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
+						</div>
+					<?php ++$x;}?>
+			<?php endforeach;?>
+			
 				</div>
-				<div class="col-md-3">
-					<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[2]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
-				</div>
-				<div class="col-md-3">
-					<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[3]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
-				</div>
-				<div class="col-md-3">
-					<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[4]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
-				</div>
-		</div>
-		<div class="row">
-				<div class="col-md-3">
-					<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[5]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
-				</div>
-				<div class="col-md-3">
-					<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[6]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
-				</div>
-				<div class="col-md-3">
-					<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[7]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
-				</div>
-				<div class="col-md-3">
-					<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[8]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
-				</div>
-		</div>
 		</div>
 		<div class="col-md-6 imagem-veiculo-descricao">
 			<h2>Descrição</h2>
