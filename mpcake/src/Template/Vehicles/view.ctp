@@ -7,10 +7,10 @@
 	<div class="col-md-12 retira-padding box-descricao-veiculo">
 		<div class="col-md-6 imagem-veiculo-descricao retira-padding">
 			<div class="col-md-12 retira-padding">
-				<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[0]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
+				<?php echo $this->Html->image("/files/Vehicles/image/croped-{$vehicle->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
 			</div>
 			<div class="row">
-
+				<!-- meu pai do ceu me recuso a corrigir isso aqui faz um loop sua anta do caralho santa mae de deus ce come bosta?-->
 				<div class="col-md-3">
 					<?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->images_vehicle[1]->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?>
 				</div>

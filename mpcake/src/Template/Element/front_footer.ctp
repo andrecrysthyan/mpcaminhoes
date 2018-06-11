@@ -87,19 +87,20 @@ function showReadMore($string){
 		<p><figure>
 			
 					<?php 
-	 				echo $this->Html->image('/files/News/image/{$news->image}', ['title' => 'Economizar gasolina', 'class' => 'col-md-6 retira-padding'])
+					//Não funcionava pq vc é burro e usou aspas simples com as chaves.
+	 				echo $this->Html->image("/files/News/image/{$news->image}", ['title' => 'Economizar gasolina', 'class' => 'col-md-6 retira-padding'])
 					?>
 
 					<!--<img title="" alt="" class="col-md-6 retira-padding" src="<?php echo $this->request->base ?>/files/News/image/{$news->image}">-->
 			<!--<?php 
-	 				echo $this->Html->image('<?= h($news->image) ?>', ['title' => 'Economizar gasolina', 'class' => 'col-md-6 retira-padding'])
+	 				//echo $this->Html->image('<?= h($news->image) ?>', ['title' => 'Economizar gasolina', 'class' => 'col-md-6 retira-padding'])
 					?>--></figure>
 			<figcaption><span class="col-md-6 retira-padding"><?= h($news->title) ?></span>
 				<p class="col-md-12 retira-padding"><?= h($news->description) ?></p></figcaption></p>
 		<?php endforeach; ?>
 
 		<!--<p><figure><?php 
-	 				echo $this->Html->image('noticia2.jpg', ['title' => 'Teste bafômetro', 'class' => 'col-md-6 retira-padding'])
+	 				//echo $this->Html->image('noticia2.jpg', ['title' => 'Teste bafômetro', 'class' => 'col-md-6 retira-padding'])
 					?></figure>
 			<figcaption><span class="col-md-6 retira-padding">DÁ PARA ENGANAR O TESTE DO BAFÔMETRO?</span>
 				<p class="col-md-12 retira-padding">Tomar vinagre, usar antisséptico bucal ou comer chiclete não livra o motorista de resultado positivo no etilômetro.</p></figcaption></p>-->

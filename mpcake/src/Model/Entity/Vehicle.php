@@ -38,6 +38,7 @@ class Vehicle extends Entity
         'brand' => true,
         'model' => true,
         'year' => true,
+        'image' => true,
         'details' => true,
         'category_id' => true,
         'created' => true,

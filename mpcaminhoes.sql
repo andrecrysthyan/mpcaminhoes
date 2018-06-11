@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.0.1
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: 09-Jun-2018 às 00:53
--- Versão do servidor: 10.1.32-MariaDB
--- PHP Version: 7.0.30
+-- Host: localhost:3306
+-- Generation Time: 10-Jun-2018 às 22:31
+-- Versão do servidor: 5.7.22-0ubuntu18.04.1
+-- PHP Version: 7.0.30-1+ubuntu18.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -134,6 +132,7 @@ CREATE TABLE `vehicles` (
   `brand` varchar(90) NOT NULL,
   `model` varchar(90) NOT NULL,
   `year` int(4) NOT NULL,
+  `image` varchar(255) NOT NULL,
   `promotion` tinyint(1) NOT NULL DEFAULT '0',
   `details` text NOT NULL,
   `category_id` int(11) NOT NULL,
@@ -145,12 +144,12 @@ CREATE TABLE `vehicles` (
 -- Extraindo dados da tabela `vehicles`
 --
 
-INSERT INTO `vehicles` (`id`, `name`, `value`, `brand`, `model`, `year`, `promotion`, `details`, `category_id`, `created`, `modified`) VALUES
-(1, 'Felipe Rodrigues', '58.50', 'TESTE', 'TESTE', 2030, 0, 'TESTEEEEEEE', 3, '2018-06-07 16:04:59', '2018-06-07 16:04:59'),
-(103, 'Ferrari teste andre', '120000.00', 'ferrari', 'f220', 2018, 1, 'ferrari lalal', 7, '2018-06-08 13:01:36', '2018-06-08 13:01:36'),
-(104, 'teste ferrari8', '255000.00', 'ferrari', 'f350', 2017, 1, 'ferrari lalala', 7, '2018-06-08 13:15:38', '2018-06-08 13:18:20'),
-(105, 'ferrari teste 3', '300000.00', 'ferrari', 'f400', 2018, 0, 'ferari lalala', 7, '2018-06-08 21:12:25', '2018-06-08 21:12:25'),
-(106, 'ferrari teste 3 lala', '255000.00', 'testeferrari', 'ferrariii', 2018, 0, 'teste', 7, '2018-06-08 21:15:24', '2018-06-08 21:15:24');
+INSERT INTO `vehicles` (`id`, `name`, `value`, `brand`, `model`, `year`, `image`, `promotion`, `details`, `category_id`, `created`, `modified`) VALUES
+(1, 'Felipe Rodrigues', '58.50', 'TESTE', 'TESTE', 2030, 'f2802419496463bd5fdd8b7d3d7ad9fd.jpg', 0, 'TESTEEEEEEE', 3, '2018-06-07 16:04:59', '2018-06-10 15:46:20'),
+(103, 'Ferrari teste andre', '120000.00', 'ferrari', 'f220', 2018, '1bba6ecacc0a5f2928397abbf5bacd44.png', 1, 'ferrari lalal', 7, '2018-06-08 13:01:36', '2018-06-10 15:46:30'),
+(104, 'teste ferrari8', '255000.00', 'ferrari', 'f350', 2017, '7ca4dddb60a80c3d557277bacb31176a.jpg', 1, 'ferrari lalala', 7, '2018-06-08 13:15:38', '2018-06-10 15:46:39'),
+(105, 'ferrari teste 3', '300000.00', 'ferrari', 'f400', 2018, 'd0d9e595ea7c001170e47494eb2f73c2.jpg', 0, 'ferari lalala', 7, '2018-06-08 21:12:25', '2018-06-10 15:46:52'),
+(106, 'ferrari teste 3 lala', '255000.00', 'testeferrari', 'ferrariii', 2018, 'c7692876bb3bf96121139e4701a5ed4f.jpg', 1, 'teste', 7, '2018-06-08 21:15:24', '2018-06-10 15:47:05');
 
 --
 -- Indexes for dumped tables
@@ -197,31 +196,26 @@ ALTER TABLE `vehicles`
 --
 ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
 --
 -- AUTO_INCREMENT for table `images_vehicle`
 --
 ALTER TABLE `images_vehicle`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
-
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `vehicles`
 --
 ALTER TABLE `vehicles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
-
 --
 -- Constraints for dumped tables
 --
@@ -237,7 +231,6 @@ ALTER TABLE `images_vehicle`
 --
 ALTER TABLE `vehicles`
   ADD CONSTRAINT `vehicle_category` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -22,7 +22,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <?= $this->Form->create($vehicle, array('role' => 'form')) ?>
+        <?= $this->Form->create($vehicle, array('role' => 'form', 'type'=>'file')) ?>
           <div class="box-body">
           <?php
             echo $this->Form->input('name');
@@ -30,6 +30,7 @@
             echo $this->Form->input('brand');
             echo $this->Form->input('model');
             echo $this->Form->input('year');
+            echo $this->Form->input('image',['class' => 'form-control','type'=>'file']);
             echo $this->Form->input('promotion');
             echo $this->Form->input('details');
             echo $this->Form->input('category_id', ['options' => $categories]);
