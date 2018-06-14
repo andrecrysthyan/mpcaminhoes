@@ -21,8 +21,8 @@
 		<p class="preto col-md-12 primeiro-titulo animated bounceInLeft">MP CAMINHÕES E CARRETAS</p>
 		<p class="laranja col-md-12 animated bounceInRight segundo-titulo">Financie o seu caminhão</p>
 		<p class="branco col-md-12 terceiro-titulo animated fadeInUp">A MP Caminhoes e Carretas facilita ao máximo o seu financiamento para proporcionar parcelas que cabem no seu bolso.</p>
-		<p><div class="col-md-6 laranja btn1 animated fadeInLeftBig">VER VEÍCULOS</div>
-			<div class="col-md-6 preto btn2 animated fadeInRightBig"> FALE CONOSCO</div></p>
+		<p><div class="col-md-6 laranja btn1 animated fadeInLeftBig"><?php echo $this->Html->link('VER VEÍCULOS', ['controller' => 'vehicles', 'action' => 'index']);?></div>
+			<div class="col-md-6 preto btn2 animated fadeInRightBig"><?php echo $this->Html->link('FALE CONOSCO', ['controller' => 'contato', 'action' => 'index']);?></div></p>
 
 </div>
 </div>
@@ -84,7 +84,8 @@
 						<span class="col-md-12 retira-padding preco-veiculo">R$ <?=$vehicle['value']?></span>
 					</div>
 					<div class="col-md-12 retira-padding bloco-data-tipo">
-						<p class="col-md-12"><i class="fas fa-truck-moving"></i><?=$vehicle->model?></p>
+						<p class="col-md-6"><i class="fas fa-truck-moving"></i><?=$vehicle->model?></p>
+						<p class="col-md-6"><i class="fas fa-clipboard-list"></i><?=$vehicle->brand?></p>
 						<p class="col-md-12"><i class="fas fa-calendar-alt"></i>Ano/Modelo: <?=$vehicle->year?></p>
 					</div>
 					</div></a>

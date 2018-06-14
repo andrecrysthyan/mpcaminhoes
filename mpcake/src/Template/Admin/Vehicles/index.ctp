@@ -21,7 +21,7 @@
               <tr>
                 <th><?= $this->Paginator->sort('id') ?></th>
                 <th><?= $this->Paginator->sort('name') ?></th>
-                <th><?= $this->Paginator->sort('value') ?></th>
+                <th><?= $this->Paginator->sort('promotion') ?></th>
                 <th><?= $this->Paginator->sort('brand') ?></th>
                 <th><?= $this->Paginator->sort('model') ?></th>
                 <th><?= $this->Paginator->sort('year') ?></th>
@@ -34,7 +34,7 @@
               <tr>
                 <td><?= $this->Number->format($vehicle->id) ?></td>
                 <td><?= h($vehicle->name) ?></td>
-                <td><?= $this->Number->format($vehicle->value) ?></td>
+                <td><?= $this->Number->format($vehicle->promotion) ?></td>
                 <td><?= h($vehicle->brand) ?></td>
                 <td><?= h($vehicle->model) ?></td>
                 <td><?= $this->Number->format($vehicle->year) ?></td>

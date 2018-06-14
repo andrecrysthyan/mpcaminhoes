@@ -9,7 +9,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => true,
+    'debug' => 0,
 
     /**
      * Configure basic information about the application.
@@ -255,7 +255,7 @@ return [
              */
             //'port' => 'non_standard_port_number',
             'username' => 'root',
-            'password' => '123456',
+            'password' => '',
             'database' => 'mpcaminhoes',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).

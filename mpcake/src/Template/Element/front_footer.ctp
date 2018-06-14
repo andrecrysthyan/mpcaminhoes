@@ -49,7 +49,7 @@ function showReadMore($string){
 
 <div class="col-md-12 retira-padding itens-footer">
 	<div class="container">
-	<div class="col-md-3 instagram-footer">
+	<div class="col-md-4 instagram-footer">
 		<?php 
 	 				echo $this->Html->image('instagram.png', ['title' => 'Instagram'])
 					?>
@@ -58,33 +58,12 @@ function showReadMore($string){
 
 
 	</div>
-	<div class="col-md-3 onde-estamos">
-		<h2>Onde estamos</h2>
-		<i class="fas fa-map-marker-alt " aria-hidden="true"></i><span>Av. Juscelino Kubitschek de Oliveira 4470 Planalto Patos de Minas / MG</span>
-		<p><i class="fas fa-phone" aria-hidden="true"></i><span class="estilo-phone">(34) 3821-5100 Fixo</span></p>
-		<p>(34) 99886-5100 <?php 
-	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Júnior</p>
-		<p>(34) 99888-5100 <?php 
-	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Murilo</p>
-		<p>(34) 99908-0850 <?php 
-	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Luís Henrique</p>
-		<p>(34) 99889-5100 <?php 
-	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Eudes</p>
-		<p>(34) 99238-1095 <?php 
-	 				echo $this->Html->image('tim.png', ['title' => 'Tim'])
-					?> | Televendas</p>
-		<p>Converse com um de nossos consultores</p>
-		<i class="fas fa-envelope" aria-hidden="true"></i><span>contato@mpcaminhoes.com.br</span>
-	</div>
-	<div class="col-md-3 noticias-transporte">
+	
+	<div class="col-md-4 noticias-transporte">
 
 		<h2>Notícias do transporte</h2>
 		<?php foreach ($news as $news): ?>
-		<p><figure>
+		<div class="row"><p><a href="<?=$this->Url->build(['controller'=>'News','action'=>'view',$news->id])?>"><figure>
 			
 					<?php 
 					//Não funcionava pq vc é burro e usou aspas simples com as chaves.
@@ -95,8 +74,8 @@ function showReadMore($string){
 			<!--<?php 
 	 				//echo $this->Html->image('<?= h($news->image) ?>', ['title' => 'Economizar gasolina', 'class' => 'col-md-6 retira-padding'])
 					?>--></figure>
-			<figcaption><span class="col-md-6 retira-padding"><?= h($news->title) ?></span>
-				<p class="col-md-12 retira-padding"><?= h($news->description) ?></p></figcaption></p>
+			<figcaption><span class="col-md-6"><?= h($news->title) ?></span>
+				<p class="col-md-6"><?= showReadMore($news->description) ?></p></figcaption></a></p></div>
 		<?php endforeach; ?>
 
 		<!--<p><figure><?php 
@@ -105,7 +84,7 @@ function showReadMore($string){
 			<figcaption><span class="col-md-6 retira-padding">DÁ PARA ENGANAR O TESTE DO BAFÔMETRO?</span>
 				<p class="col-md-12 retira-padding">Tomar vinagre, usar antisséptico bucal ou comer chiclete não livra o motorista de resultado positivo no etilômetro.</p></figcaption></p>-->
 	</div>
-	<div class="col-md-3 face-footer">
+	<div class="col-md-4 face-footer">
 		<?php 
 	 				echo $this->Html->image('facebook.png', ['title' => 'Facebook'])
 					?>
@@ -117,17 +96,44 @@ function showReadMore($string){
 </div>
 
 <div class="col-md-12 rodape retira-padding">
-	<div class="col-md-3">
+	<div class="col-md-3 logo-rodape-margin">
 		<?php 
 	 				echo $this->Html->image('logo-rodape.png', ['title' => 'Mp Caminhoes'])
 					?>
 	</div>
-	<div class="col-md-3 col-md-offset-3 endereco-rodape">
-		Av. Juscelino Kubitschek de Oliveira 4470 Planalto
-Patos de Minas / MG
+
+
+	<div class="col-md-6 onde-estamos">
+		<h2>Converse com um de nossos consultores</h2>
+		
+		<div class="col-md-12">
+		<p><i class="fas fa-phone" aria-hidden="true"></i><span class="estilo-phone">(34) 3821-5100 Fixo</span></p>
 	</div>
-	<div class="col-md-3">
-		<a href="#" class=”voltar-ao-topo”>Voltar ao topo</a>
+	<div class="col-md-6">
+		<p>(34) 99886-5100 <?php 
+	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
+					?> | Júnior</p>
+		<p>(34) 99888-5100 <?php 
+	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
+					?> | Murilo</p>
+		<p>(34) 99908-0850 <?php 
+	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
+					?> | Luís Henrique</p>
+		</div>
+		<div class="col-md-6">
+		
+		<p>(34) 99889-5100 <?php 
+	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
+					?> | Eudes</p>
+		<p>(34) 99238-1095 <?php 
+	 				echo $this->Html->image('tim.png', ['title' => 'Tim'])
+					?> | Televendas</p>
+		</div>
+		
+	</div>
+
+	<div class="col-md-3 seta-topo">
+		<a href="#" class=”voltar-ao-topo”><i class="fas fa-chevron-circle-up fa-4x"></i></a>
 
 		<!--Start of Tawk.to Script-->
 <script type="text/javascript">
@@ -143,6 +149,13 @@ s0.parentNode.insertBefore(s1,s0);
 </script>
 <!--End of Tawk.to Script-->
 	</div>
+
+
+	<div class="col-md-12 endereco-rodape">
+		Av. Juscelino Kubitschek de Oliveira 4470 Planalto
+Patos de Minas / MG
+	</div>
+	
 
 </div>
 
