@@ -1,0 +1,177 @@
+@media (max-width: 480px) {
+ /*celular vertical*/
+
+ .operadora-header,
+ .typed-cursor,
+ .promocao-semana,
+ .barra-footer{
+ 	display: none;
+ }
+
+ .box-titulo-veiculo{
+ 	text-align: center;
+ }
+
+ .onde-estamos h2{
+ 	font-size: 30px;
+ 	margin: 35px 0 15px;
+ }
+
+ .imagem-veiculo-descricao{
+ 	text-align: center;
+ }
+
+ .new-discussion-timeline{
+ 	width: 100% !important;
+ }
+
+
+
+ .bloco-veiculo{
+ 	margin-top: 50px;
+ }
+
+
+ .icone-whats {
+ 	margin-left: initial;
+ }
+.conteudo-header-2{
+	text-align: center;
+}
+.icones-redes-sociais{
+	text-align: center;
+}
+
+.caption-imagem{
+	position: initial !important;
+	top: initial !important;
+	margin-left: 0px !important;
+}
+
+.menu-header{
+	top: initial;
+	padding-left: initial !important;
+	padding-right: initial !important; 
+}
+.navbar-default{
+	background-color: initial !important;
+	background-image: none;
+}
+
+.navbar-default .navbar-toggle{
+	border: none;
+}
+
+.navbar-toggle{
+	border: none;
+}
+
+.navbar-header button{
+	background-color: initial !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+	background-color: white;
+}
+
+.fundo-header{
+	padding-left: 0px !important;
+	padding-right: 0px !important;
+}
+
+
+}
+
+@media (min-width:481px) and (max-width: 767px) {  
+  
+
+
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+   
+ 
+}
+
+@media (min-width: 979px) and (max-width: 1199px) {
+    
+    /*tablet horizontal*/
+    
+}
+
+@media (min-width: 1200px) { 
+   
+
+
+}
+
+
+
+/*FAROL */
+
+@media (max-width: 340px) { 
+   
+ .farol2{
+ 	top: 12%;
+ 	width: 50px;
+ }
+
+ .farol{
+ 	width: 50px;
+ 	top: 13%;
+ }
+
+}
+
+@media (min-width: 341px) and (max-width: 390px){
+
+ .farol2{
+ 	top: 15%;
+ 	width: 50px;
+ }
+
+ .farol{
+ 	width: 50px;
+ 	top: 16%;
+ }
+}
+
+@media (min-width: 391px) and (max-width:440px){
+
+ .farol2{
+ 	top: 18%;
+ 	width: 50px;
+ }
+
+ .farol{
+ 	width: 50px;
+ 	top: 19%;
+ }
+}
+
+@media (min-width: 441px) and (max-width:480px){
+
+ .farol2{
+ 	top: 19%;
+ 	left: 31%;
+ 	width: 50px;
+ }
+
+ .farol{
+ 	width: 50px;
+ 	top: 20%;
+ 	left: 50%;
+ }
+}
+
+@media (min-width: 1440px) and (max-width:1940px){
+.farol{
+	top: 60%;
+}
+
+.farol2{
+	top: 55%;
+}
+
+
+	}

@@ -22,24 +22,24 @@ function showReadMore($string){
 }(document, 'script', 'facebook-jssdk'));</script>
 
 
-<div class="col-md-12 retira-padding mapa">
+<div class="col-md-12 col-xs-12 retira-padding mapa">
 
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.6922062672666!2d-46.492456385631066!3d-18.63290890409417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ae8aad4e2115e5%3A0xc9212558010cb4c!2sMP+Caminh%C3%B5es+e+Carretas!5e0!3m2!1spt-BR!2sbr!4v1527963892557" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
 </div>
 
-<div class="col-md-12 retira-padding barra-footer">
+<div class="col-md-12 col-xs-12 retira-padding barra-footer">
 	<div class="container-fluid">
-	<div class="col-md-12 conteudo-barra-footer retira-padding">
-	<div class="col-md-4 retira-padding mapa-marcador">
+	<div class="col-md-12 col-xs-12 conteudo-barra-footer retira-padding">
+	<div class="col-md-4 col-xs-12 retira-padding mapa-marcador">
 		<i class="fas fa-map-marker-alt fa-2x" aria-hidden="true"></i>
 		<span>Av. Juscelino Kubitschek de Oliveira 4470 Planalto</span>
 	</div>
-	<div class="col-md-4 retira-padding fone-marcador">
+	<div class="col-md-4 col-xs-12 retira-padding fone-marcador">
 		<i class="fas fa-phone fa-2x" aria-hidden="true"></i>
 		<span>(34) 3821-5100 Fixo</span>
 	</div>
-	<div class="col-md-4 retira-padding mail-marcador">
+	<div class="col-md-4 col-xs-12 retira-padding mail-marcador">
 		<i class="fas fa-envelope fa-2x" aria-hidden="true"></i>
 		<span>contato@mpcaminhoes.com.br</span>
 	</div>
@@ -47,9 +47,9 @@ function showReadMore($string){
 </div>
 </div>
 
-<div class="col-md-12 retira-padding itens-footer">
+<div class="col-md-12 col-xs-12 retira-padding itens-footer">
 	<div class="container">
-	<div class="col-md-4 instagram-footer">
+	<div class="col-md-4 col-xs-12 instagram-footer" data-aos="zoom-in">
 		<?php 
 	 				echo $this->Html->image('instagram.png', ['title' => 'Instagram'])
 					?>
@@ -59,7 +59,7 @@ function showReadMore($string){
 
 	</div>
 	
-	<div class="col-md-4 noticias-transporte">
+	<div class="col-md-4 col-xs-12 noticias-transporte" data-aos="zoom-in">
 
 		<h2>Notícias do transporte</h2>
 		<?php foreach ($news as $news): ?>
@@ -74,8 +74,8 @@ function showReadMore($string){
 			<!--<?php 
 	 				//echo $this->Html->image('<?= h($news->image) ?>', ['title' => 'Economizar gasolina', 'class' => 'col-md-6 retira-padding'])
 					?>--></figure>
-			<figcaption><span class="col-md-6"><?= h($news->title) ?></span>
-				<p class="col-md-6"><?= showReadMore($news->description) ?></p></figcaption></a></p></div>
+			<figcaption><span class="col-md-6 col-xs-12"><?= h($news->title) ?></span>
+				<p class="col-md-6 col-xs-12"><?= showReadMore($news->description) ?></p></figcaption></a></p></div>
 		<?php endforeach; ?>
 
 		<!--<p><figure><?php 
@@ -84,7 +84,7 @@ function showReadMore($string){
 			<figcaption><span class="col-md-6 retira-padding">DÁ PARA ENGANAR O TESTE DO BAFÔMETRO?</span>
 				<p class="col-md-12 retira-padding">Tomar vinagre, usar antisséptico bucal ou comer chiclete não livra o motorista de resultado positivo no etilômetro.</p></figcaption></p>-->
 	</div>
-	<div class="col-md-4 face-footer">
+	<div class="col-md-4 col-xs-12 face-footer" data-aos="zoom-in">
 		<?php 
 	 				echo $this->Html->image('facebook.png', ['title' => 'Facebook'])
 					?>
@@ -95,44 +95,54 @@ function showReadMore($string){
 </div>
 </div>
 
-<div class="col-md-12 rodape retira-padding">
-	<div class="col-md-3 logo-rodape-margin">
+<div class="col-md-12 col-xs-12 rodape retira-padding">
+	<div class="col-md-3 col-xs-12 logo-rodape-margin">
 		<?php 
-	 				echo $this->Html->image('logo-rodape.png', ['title' => 'Mp Caminhoes'])
+	 				echo $this->Html->image('logo-rodape.png', ['title' => 'Mp Caminhoes', 'class' => 'animated pulse'])
 					?>
 	</div>
 
 
-	<div class="col-md-6 onde-estamos">
+	<div class="col-md-6 col-xs-12 onde-estamos">
 		<h2>Converse com um de nossos consultores</h2>
 		
-		<div class="col-md-12">
+		<div class="col-md-12 col-xs-12">
 		<p><i class="fas fa-phone" aria-hidden="true"></i><span class="estilo-phone">(34) 3821-5100 Fixo</span></p>
 	</div>
-	<div class="col-md-6">
-		<p>(34) 99886-5100 <?php 
+	<div class="col-md-6 col-xs-12 whats-footer">
+		<p><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5534998865100" target="_blank"><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
+					?> (34) 99886-5100 <?php 
 	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Júnior</p>
-		<p>(34) 99888-5100 <?php 
+					?> | Júnior</a></p>
+		<p><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5534998885100" target="_blank"><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
+					?> (34) 99888-5100 <?php 
 	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Murilo</p>
-		<p>(34) 99908-0850 <?php 
+					?> | Murilo</a></p>
+		<p><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5534999080850" target="_blank"><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
+					?> (34) 99908-0850 <?php 
 	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Luís Henrique</p>
+					?> | Luís Henrique</a></p>
 		</div>
-		<div class="col-md-6">
+		<div class="col-md-6 col-xs-12 whats-footer">
 		
-		<p>(34) 99889-5100 <?php 
+		<p><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5534998895100" target="_blank"><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
+					?> (34) 99889-5100 <?php 
 	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Eudes</p>
-		<p>(34) 99238-1095 <?php 
+					?> | Eudes</a></p>
+		<p><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5534992381095" target="_blank"><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
+					?> (34) 99238-1095 <?php 
 	 				echo $this->Html->image('tim.png', ['title' => 'Tim'])
-					?> | Televendas</p>
+					?> | Televendas</a></p>
 		</div>
 		
 	</div>
 
-	<div class="col-md-3 seta-topo">
+	<div class="col-md-3 col-xs-12 seta-topo">
 		<a href="#" class=”voltar-ao-topo”><i class="fas fa-chevron-circle-up fa-4x"></i></a>
 
 		<!--Start of Tawk.to Script-->
@@ -151,7 +161,7 @@ s0.parentNode.insertBefore(s1,s0);
 	</div>
 
 
-	<div class="col-md-12 endereco-rodape">
+	<div class="col-md-12 col-xs-12 endereco-rodape">
 		Av. Juscelino Kubitschek de Oliveira 4470 Planalto
 Patos de Minas / MG
 	</div>

@@ -1,8 +1,10 @@
+<?php echo $this->Form->create("Contato", array('url' => array('controller' => 'contato', 'action' => 'index'), "class" => "form")); ?>
+
 <div class="container">
 	<div class="col-md-12 pag-contato">
 		<h2 class="h2-contato">Contato</h2>
 
-		<div class="col-md-6 onde-estamos">
+		<div class="col-md-6 onde-estamos" data-aos="zoom-in">
 		<h2>Onde estamos</h2>
 		<i class="fas fa-map-marker-alt " aria-hidden="true"></i><span>Av. Juscelino Kubitschek de Oliveira 4470 Planalto Patos de Minas / MG</span>
 		<p><i class="fas fa-phone" aria-hidden="true"></i><span class="estilo-phone">(34) 3821-5100 Fixo</span></p>
@@ -25,8 +27,8 @@
 		<i class="fas fa-envelope" aria-hidden="true"></i><span>contato@mpcaminhoes.com.br</span>
 	</div>
 
-	<div class="col-md-6">
-		<form>
+	<div class="col-md-6" data-aos="zoom-in">
+	
 		<input class="col-md-12 col-xs-12" type="text" name='data[Contato][nome]' id='ContatoNome' required='required' placeholder="Nome">	
 			</input>
 			<input class="col-md-12 col-xs-12" type="text" name='data[Contato][email]' id='ContatoEmail' required='required' placeholder="Email">	
@@ -35,8 +37,10 @@
 			</input>
 			<textarea class="col-md-12 col-xs-12" name='data[Contato][mensagem]' id='ContatoMensagem' required='required' rows="13" placeholder="Mensagem"></textarea>
 			<button type='submit'>Enviar</button>
-		</form>
+	
 	</div>
 	</div>
 
 </div>
+
+<?php echo $this->Form->end(); ?>

@@ -7,6 +7,46 @@
     top: 0px;
 }
 
+.box-titulo-veiculo{
+    margin-top: 50px;
+
+border: 1px solid #ccc;
+
+margin-bottom: 50px;
+padding: 30px;
+
+}
+
+.entrar-admin{
+    color: black;
+left: 5px;
+position: relative;
+z-index: 999;
+}
+
+.box-titulo-veiculo h2{
+    padding-left: 15px;
+}
+
+.box-titulo-veiculo p{
+    padding-left: 15px;
+
+    border-radius: 15px 0 0 0;
+
+
+    padding-right: 15px;
+    padding-left: 15px;
+color: #fb3c03;
+
+font-family: 'bebasneue';
+font-size: 30px;
+letter-spacing: 1px;
+}
+
+.typed-cursor{
+    display: none;
+}
+
 .icone-admin{
     float: right;
     color: black;
@@ -208,6 +248,8 @@ margin-left: 30px;
 line-height: 36px;
     color: white;
     font-weight: bold;
+    height: 56px;
+    text-align: center;
 
 }
 
@@ -246,6 +288,30 @@ text-align: center;
 border-bottom: 15px solid #fb3c03;
 }
 
+.view-noticias{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.noticias-transporte a{
+    color: initial;
+}
+.noticias-transporte a:hover{
+    font-weight: bold;
+    color: #fb3c03;
+}
+.seta-voltar a{
+    color: #fb3c03;
+}
+
+.seta-voltar{
+    text-align: center;
+}
+.operadora-header img{
+    position: relative;
+    top: -5px;
+}
+
 .itens-footer{
     padding-top: 20px;
     font-family: 'roboto';
@@ -278,6 +344,17 @@ padding: 0;
 text-align: center;
 }
 
+.logo-rodape-margin .pulse{
+    animation-iteration-count: infinite;
+}
+
+.whats-footer a{
+    color: initial !important;
+}
+
+.consultas a{
+    color: initial !important;
+}
 .onde-estamos p{
     margin-top: 15px;
     font-size: 14px;
@@ -289,6 +366,7 @@ text-align: center;
     margin-bottom: 15px;
     font-size: 14px;
     font-family: 'roboto';
+    color: #a4a4a4;
 }
 
 .noticias-transporte span{
@@ -355,7 +433,7 @@ line-height: 20px;
 }
 
 .bloco-data-tipo{
-    text-align: left;
+    text-align: center;
     border:1px dashed #ccc;
 }
 
@@ -380,6 +458,12 @@ line-height: 20px;
     letter-spacing: 1px;
 }
 
+.nome-campo{
+    border-radius: initial !important;
+    background-color: initial !important;
+    color: #fb3c03 !important;
+}
+
 .bloco-nome-preco{
   /*  border-bottom: 1px solid #ccc;*/
     padding-bottom: 20px;
@@ -387,9 +471,9 @@ line-height: 20px;
 
 .mostra-veiculos p{
     color: #A3A3A3;
-    font-size: 14px;
-    line-height: 2;
-    font-weight: bold;
+    font-size: 11px;
+
+   
     text-transform: uppercase;
 }
 
@@ -486,7 +570,10 @@ color: white;
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
+.view-noticias p{
+    color: #a4a4a4;
+    text-align: justify;
+}
 .h2-contato{
     margin-bottom: 50px;
     text-align: center;
@@ -496,12 +583,34 @@ color: white;
 .box-titulo-veiculo h2,
 .h2-contato,
 .noticias-transporte h2,
-.onde-estamos h2{
+.onde-estamos h2,
+.imagem-veiculo-descricao h2{
     font-family: 'bebasneue';
     font-size: 38px;
     text-transform: uppercase;
     color: black;
     font-weight: bold;
+}
+
+.imagem-veiculo-descricao p{
+    font-size: 14px;
+font-family: 'roboto';
+margin-top: 15px;
+margin-bottom: 15px; 
+}
+
+.icone-whats-2{
+    width: 20px;
+}
+
+.imagem-veiculo-descricao span{
+    color: #fb3c03;
+    font-weight: bold;
+}
+
+.bloco-mini-veiculos-view{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .consultas h3{

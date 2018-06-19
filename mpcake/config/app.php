@@ -9,7 +9,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => 0,
+    'debug' => 1,
 
     /**
      * Configure basic information about the application.
@@ -209,6 +209,17 @@ return [
             'tls' => null,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
+        'smtp' => [
+          'className' => 'Smtp',
+          'host'=> 'smtp.nuvemdesenvolvimentoweb.com.br',
+          'port'=>587,
+          'timeout'=>30,
+          'username'=>'contato@nuvemdesenvolvimentoweb.com.br',
+          'password' => 'nuvem@123',
+          'client' => null,
+          'log' => true,
+          //'emailFormat' => "html"
+        ]
     ],
 
     /**
@@ -247,16 +258,16 @@ return [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => 'localhost',
+            'host' => 'mpc.mysql.uhserver.com',
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'root',
-            'password' => '',
-            'database' => 'mpcaminhoes',
+            'username' => 'adminmpcake',
+            'password' => 'nuvem@mp1',
+            'database' => 'mpc',
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */

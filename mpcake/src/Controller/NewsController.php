@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * News Controller
@@ -20,9 +21,9 @@ class NewsController extends AppController
      */
     public function index()
     {
-        $news = $this->paginate($this->News);
+        $news2 = $this->paginate($this->News);
 
-        $this->set(compact('news'));
+        $this->set(compact('news2'));
     }
 
     /**
@@ -34,11 +35,12 @@ class NewsController extends AppController
      */
     public function view($id = null)
     {
-        $news = $this->News->get($id, [
+        $news2 = $this->News->get($id, [
             'contain' => []
         ]);
 
-        $this->set('news', $news);
+        $this->set('news2', $news2);
+
     }
 
     /**
