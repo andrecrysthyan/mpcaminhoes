@@ -31,13 +31,13 @@
 		</div>
 		<div class="col-md-6 imagem-veiculo-descricao">
 			<h2>Descrição</h2>
-			<p><span>Categoria:</span> <?=$vehicle['brand']?></p>
-			<p><span>Modelo:</span> <?=$vehicle['model']?></p>
-			<p><span>Ano:</span> <?=$vehicle['year']?></p>
+			<p><span class="titulo-laranja">Categoria:</span> <?=$vehicle['brand']?></p>
+			<p><span class="titulo-laranja">Modelo:</span> <?=$vehicle['model']?></p>
+			<p><span class="titulo-laranja">Ano:</span> <?=$vehicle['year']?></p>
 			<h2>Detalhes</h2>
-			<p><span>Detalhes:</span> <?=$vehicle['details']?></p>
+			<p><span class="titulo-laranja">Detalhes:</span> <?=$vehicle['details']?></p>
 			<h2>Valor</h2>
-			<p><span>Valor: </span>R$ <?=$vehicle['value']?></p>
+			<p><span class="titulo-laranja">Valor: </span>R$ <?=$vehicle['value']?></p>
 			<div class="onde-estamos col-md-12 retira-padding">
 			<h2>Onde estamos</h2>
 		<p><i class="fas fa-map-marker-alt " aria-hidden="true"></i><span>Av. Juscelino Kubitschek de Oliveira 4470 Planalto Patos de Minas / MG</span></p>
@@ -74,16 +74,27 @@
 	</div>
 
 	<div class="col-md-12">
-		<form>
-		<input class="col-md-12 col-xs-12" type="text" name='data[Contato][nome]' id='ContatoNome' required='required' placeholder="Nome">	
+		
+		<!--<input class="col-md-12 col-xs-12" type="text" name='data[Veiculo][nome]' id='VeiculoNome' required='required' placeholder="Nome">	
 			</input>
-			<input class="col-md-12 col-xs-12" type="text" name='data[Contato][email]' id='ContatoEmail' required='required' placeholder="Email">	
+			<input class="col-md-12 col-xs-12" type="text" name='data[Veiculo][email]' id='VeiculoEmail' required='required' placeholder="Email">	
 			</input>
-			<input class="col-md-12 col-xs-12" type="text" name='data[Contato][telefone]' id='ContatoTelefone' required='required' placeholder="Telefone">	
+			<input class="col-md-12 col-xs-12" type="text" name='data[Veiculo][telefone]' id='VeiculoTelefone' required='required' placeholder="Telefone">	
 			</input>
-			<textarea class="col-md-12 col-xs-12" name='data[Contato][mensagem]' id='ContatoMensagem' required='required' rows="13" placeholder="Mensagem"></textarea>
-			<button type='submit'>Enviar</button>
-		</form>
+			<input class="col-md-12 col-xs-12" type="text" value="http://localhost/mpcake3/vehicles/view/<?=$vehicle['id']?>" name='data[Veiculo][interesse]' id='VeiculoInteresse' readonly="true">	
+			</input>
+			<textarea class="col-md-12 col-xs-12" name='data[Veiculo][mensagem]' id='VeiculoMensagem' required='required' rows="13" placeholder="Mensagem"></textarea>
+			<button type='submit'>Enviar</button> -->
+
+			<?php echo $this->Form->create($vehicleform);
+echo $this->Form->input('nome');
+echo $this->Form->input('email');
+echo $this->Form->input('telefone');
+echo $this->Form->input('veiculo');
+echo $this->Form->input('mensagem');
+echo $this->Form->button('Enviar');
+echo $this->Form->end();?>
+		
 	</div>
 </div>
 </div>

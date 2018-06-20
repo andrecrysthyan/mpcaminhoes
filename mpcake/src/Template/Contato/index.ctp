@@ -1,4 +1,4 @@
-<?php echo $this->Form->create("Contato", array('url' => array('controller' => 'contato', 'action' => 'index'), "class" => "form")); ?>
+
 
 <div class="container">
 	<div class="col-md-12 pag-contato">
@@ -28,19 +28,26 @@
 	</div>
 
 	<div class="col-md-6" data-aos="zoom-in">
+
+		<?php echo $this->Form->create($contact);
+echo $this->Form->input('nome');
+echo $this->Form->input('email');
+echo $this->Form->input('telefone');
+echo $this->Form->input('mensagem');
+echo $this->Form->button('Enviar');
+echo $this->Form->end();?>
 	
-		<input class="col-md-12 col-xs-12" type="text" name='data[Contato][nome]' id='ContatoNome' required='required' placeholder="Nome">	
+		<!--<input class="col-md-12 col-xs-12" type="text" name='data[Contato][nome]' id='ContatoNome' required='required' placeholder="Nome">	
 			</input>
 			<input class="col-md-12 col-xs-12" type="text" name='data[Contato][email]' id='ContatoEmail' required='required' placeholder="Email">	
 			</input>
 			<input class="col-md-12 col-xs-12" type="text" name='data[Contato][telefone]' id='ContatoTelefone' required='required' placeholder="Telefone">	
 			</input>
 			<textarea class="col-md-12 col-xs-12" name='data[Contato][mensagem]' id='ContatoMensagem' required='required' rows="13" placeholder="Mensagem"></textarea>
-			<button type='submit'>Enviar</button>
+			<button type='submit'>Enviar</button>-->
 	
 	</div>
 	</div>
 
 </div>
 
-<?php echo $this->Form->end(); ?>

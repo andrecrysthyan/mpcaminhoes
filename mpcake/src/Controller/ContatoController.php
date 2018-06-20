@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Event\Event;
 use Cake\Mailer\Email;
+use App\Form\ContactForm;
 
 /**
  * Galerias Controller
@@ -27,27 +28,22 @@ class ContatoController extends AppController
     public function index()
     {
 
-         if ($this->request->is('ajax') || $this->request->is('post')) {
-            try {
-                $data = $this->request->getData()['data'];
-                $mensagem = "Nome: {$data['Contato']['nome']}\n";
-                $mensagem .= "E-mail: {$data['Contato']['email']}\n";
-                $mensagem .= "Telefone: {$data['Contato']['telefone']}\n";
-               
-                $mensagem .= "MENSAGEM: {$data['Contato']['mensagem']}\n";
-                $email = new Email('smtp');
-                $Email->from('contato@nuvemdesenvolvimentoweb.com.br', $data['Contato']['nome']);
-                #$Email->to('atendimento@vegcertificado.com.br');
-               $Email->to('contato@nuvemdesenvolvimentoweb.com.br');
-                $Email->replyTo($data['Contato']['email']);
-                $Email->subject("Contato - Nuvem");
-                $Email->send($mensagem);
-                exit("true");
-            } catch (Exception $e) {
-                exit(debug($e->getMessage()));
-            }
- 
-        }
+        $contact = new ContactForm();
+if ($this->request->is('post')) {
+if ($contact->execute($this->request->data)) {
+$this->Flash->success('Mensagem enviada com sucesso! Aguarde nosso retorno!');
+$this->request->data['nome'] = null;
+$this->request->data['email'] = null;
+$this->request->data['telefone'] = null;
+$this->request->data['mensagem'] = null;
+} else {
+$this->Flash->error('Houve um problema em um dos campos, tente novamente.');
+}
+}
+$this->set('contact', $contact);
+
+
+    
         $title_for_layout = "Contato";
  
         $this->set(compact('title_for_layout'));

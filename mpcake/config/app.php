@@ -194,33 +194,32 @@ return [
      * appropriate file to src/Mailer/Transport. Transports should be named
      * 'YourTransport.php', where 'Your' is the name of the transport.
      */
-    'EmailTransport' => [
-        'default' => [
-            'className' => 'Mail',
-            /*
-             * The following keys are used in SMTP transports:
-             */
-            'host' => 'localhost',
-            'port' => 25,
-            'timeout' => 30,
-            'username' => null,
-            'password' => null,
-            'client' => null,
-            'tls' => null,
-            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
-        ],
-        'smtp' => [
-          'className' => 'Smtp',
-          'host'=> 'smtp.nuvemdesenvolvimentoweb.com.br',
-          'port'=>587,
-          'timeout'=>30,
-          'username'=>'contato@nuvemdesenvolvimentoweb.com.br',
-          'password' => 'nuvem@123',
-          'client' => null,
-          'log' => true,
-          //'emailFormat' => "html"
-        ]
-    ],
+'EmailTransport' => [
+'default' => [
+'className' => 'Smtp',
+// The following keys are used in SMTP transports
+'host' => 'smtp.nuvemdesenvolvimentoweb.com.br',
+'port' => 587,
+'timeout' => 30,
+'username' => 'noreply@nuvemdesenvolvimentoweb.com.br',
+'password' => 'nuvem@prime',
+'client' => null,
+'tls' => null,
+],
+],
+
+'Email' => [
+'default' => [
+'transport' => 'default',
+'from' => 'noreply@nuvemdesenvolvimentoweb.com.br',
+//'charset' => 'utf-8',
+//'headerCharset' => 'utf-8',
+],
+],
+
+        
+
+       
 
     /**
      * Email delivery profiles

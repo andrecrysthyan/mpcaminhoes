@@ -1,3 +1,4 @@
+<?php echo $this->CKEditor->loadJs(); ?>
 <section class="content-header">
   <h1>
     Vehicle
@@ -32,7 +33,9 @@
             echo $this->Form->input('year');
             echo $this->Form->input('image',['class' => 'form-control','type'=>'file']);
             echo $this->Form->input('promotion');
-            echo $this->Form->input('details');
+            //echo $this->Form->input('details');
+            echo $this->Form->input('details',['class' => 'form-control']);
+            echo $this->CKEditor->replace('details');
             echo $this->Form->input('category_id', ['options' => $categories]);
           ?>
           </div>

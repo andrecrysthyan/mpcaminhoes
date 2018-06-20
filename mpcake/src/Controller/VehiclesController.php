@@ -2,6 +2,8 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
+use App\Form\VehicleForm;
 
 /**
  * Vehicles Controller
@@ -37,6 +39,23 @@ class VehiclesController extends AppController
      */
     public function view($id = null)
     {
+
+        $vehicleform = new VehicleForm();
+if ($this->request->is('post')) {
+if ($vehicleform->execute($this->request->data)) {
+$this->Flash->success('Mensagem enviada com sucesso! Aguarde nosso retorno!');
+$this->request->data['nome'] = null;
+$this->request->data['email'] = null;
+$this->request->data['telefone'] = null;
+$this->request->data['veiculo'] = null;
+$this->request->data['mensagem'] = null;
+} else {
+$this->Flash->error('Houve um problema em um dos campos, tente novamente.');
+}
+}
+$this->set('vehicleform', $vehicleform);
+
+
         $vehicle = $this->Vehicles->get($id, [
             'contain' => ['Categories', 'ImagesVehicle']
         ]);
