@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0c57dec0f514ba684c2112db5004e242",
+    "content-hash": "647c1a0d943ec3eb777388db8e91e58e",
     "packages": [
         {
             "name": "akkaweb/cakephp-ckeditor",
@@ -639,6 +639,61 @@
             "time": "2018-04-30T10:33:04+00:00"
         },
         {
+            "name": "gumlet/php-image-resize",
+            "version": "1.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gumlet/php-image-resize.git",
+                "reference": "2a38f3a49e2ee907f16064d8def6828c7902c0b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gumlet/php-image-resize/zipball/2a38f3a49e2ee907f16064d8def6828c7902c0b6",
+                "reference": "2a38f3a49e2ee907f16064d8def6828c7902c0b6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "ext-gd": "*",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "apigen/apigen": "^4.1",
+                "ext-exif": "*",
+                "ext-gd": "*",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^4.8"
+            },
+            "suggest": {
+                "ext-exif": "Auto-rotate jpeg files"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Gumlet\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aditya Patadia",
+                    "homepage": "http://aditya.patadia.org/"
+                }
+            ],
+            "description": "PHP class to re-size and scale images",
+            "homepage": "https://github.com/gumlet/php-image-resize",
+            "keywords": [
+                "image",
+                "php",
+                "resize",
+                "scale"
+            ],
+            "time": "2018-06-25T06:41:48+00:00"
+        },
+        {
             "name": "imagine/imagine",
             "version": "v0.7.1",
             "source": {
@@ -695,6 +750,57 @@
                 "image processing"
             ],
             "time": "2017-05-16T10:31:22+00:00"
+        },
+        {
+            "name": "james-heinrich/phpthumb",
+            "version": "v1.7.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JamesHeinrich/phpThumb.git",
+                "reference": "51af297b5946c86a902103b5886f93aa0d37ed83"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JamesHeinrich/phpThumb/zipball/51af297b5946c86a902103b5886f93aa0d37ed83",
+                "reference": "51af297b5946c86a902103b5886f93aa0d37ed83",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=4.3.3"
+            },
+            "suggest": {
+                "ext-gd": "PHP GD library",
+                "ext-imagick": "PHP ImageMagick"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "phpthumb.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL"
+            ],
+            "authors": [
+                {
+                    "name": "James Heinrich",
+                    "email": "info@silisoftware.com",
+                    "homepage": "http://www.silisoftware.com/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The PHP thumbnail generator",
+            "homepage": "http://phpthumb.sourceforge.net/",
+            "keywords": [
+                "ImageMagick",
+                "gd",
+                "image",
+                "magic",
+                "thumb",
+                "thumbnail"
+            ],
+            "time": "2016-08-10T17:12:04+00:00"
         },
         {
             "name": "jdorn/sql-formatter",

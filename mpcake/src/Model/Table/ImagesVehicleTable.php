@@ -61,17 +61,23 @@ class ImagesVehicleTable extends Table
                     var_dump($data);
                     $extension = pathinfo($data['name'], PATHINFO_EXTENSION);
                     $tmp = tempnam(sys_get_temp_dir(), 'upload') . '.' . $extension;
+                    $image = new \Gumlet\ImageResize($data['tmp_name']);
+                    //$image = new ImageResize($data['tmp_name']);
+                    $image->resizeToWidth(480);
+                    $image->crop(480, 260);
+                    $image->save($tmp);
                   //  $size = new \Imagine\Image\Box(500, 450);
-                    $size = new \Imagine\Image\Box(480, 260);
-                    $mode = \Imagine\Image\ImageInterface::THUMBNAIL_INSET;
+                    /*$size = new \Imagine\Image\Box(480, 260);
+                    $mode = \Imagine\Image\ImageInterface::RESIZE_UNDEFINED;
                     $imagine = new \Imagine\Gd\Imagine();
                     $imagine->open($data['tmp_name'])
-                        ->thumbnail($size, $mode)
+                        ->resize($size, $mode)
                        // ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(500, 450))
-                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(480, 260))
+                        ->crop(new \Imagine\Image\Point(0, 0), $size)
                         ->save($tmp);
 
                     // Now return the original *and* the thumbnail
+                    */
                     return [
                         $data['tmp_name'] => $data['name'],
                         $tmp => 'croped-' . $data['name'],

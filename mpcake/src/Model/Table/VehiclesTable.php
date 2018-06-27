@@ -55,17 +55,24 @@ class VehiclesTable extends Table
                 },
                 'transformer' =>  function ($table, $entity, $data, $field, $settings) {
                     var_dump($data);
-                    $extension = pathinfo($data['name'], PATHINFO_EXTENSION);
+                    /*$extension = pathinfo($data['name'], PATHINFO_EXTENSION);
                     $tmp = tempnam(sys_get_temp_dir(), 'upload') . '.' . $extension;
                     $size = new \Imagine\Image\Box(480, 260);
-                    $mode = \Imagine\Image\ImageInterface::THUMBNAIL_INSET;
+                    $mode = \Imagine\Image\ImageInterface::RESIZE_UNDEFINED;
                     $imagine = new \Imagine\Gd\Imagine();
                     $imagine->open($data['tmp_name'])
-                        ->thumbnail($size, $mode)
-                        ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(480, 260))
+                        ->resize($size, $mode)
+                       // ->crop(new \Imagine\Image\Point(0, 0), new \Imagine\Image\Box(500, 450))
+                        ->crop(new \Imagine\Image\Point(0, 0), $size)
                         ->save($tmp);
-
-                    // Now return the original *and* the thumbnail
+                    // Now return the original *and* the thumbnail*/
+                    $extension = pathinfo($data['name'], PATHINFO_EXTENSION);
+                    $tmp = tempnam(sys_get_temp_dir(), 'upload') . '.' . $extension;
+                    $image = new \Gumlet\ImageResize($data['tmp_name']);
+                    //$image = new ImageResize($data['tmp_name']);
+                    $image->resizeToWidth(480);
+                    $image->crop(480, 260);
+                    $image->save($tmp);
                     return [
                         $data['tmp_name'] => $data['name'],
                         $tmp => 'croped-' . $data['name'],

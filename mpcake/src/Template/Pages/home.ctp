@@ -126,9 +126,9 @@
 			
 			<section id="dg-container" class="dg-container">
 				<div class="dg-wrapper">
-					<?php foreach($Vehicles_promo as $vehicle):?>						
-						<a href="<?=$this->Url->build(['controller'=>'Vehicles','action'=>'view',$vehicle->id])?>"><?php echo $this->Html->image("/files/Vehicles/image/croped-{$vehicle->image}", ['title' => 'Promoção da semana']) ?>
-						<div><?=$vehicle['name']?> - <span class="preco-promocao">R$ <?=$vehicle['value']?></span>
+					<?php foreach($Vehicles_promo->images_vehicle as $vehicle):?>						
+						<a href="<?=$this->Url->build(['controller'=>'Vehicles','action'=>'view',$Vehicles_promo['id']])?>"><?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$vehicle->image}", ['title' => 'Promoção da semana']) ?>
+						<div><?=$Vehicles_promo['name']?> - <span class="preco-promocao">R$ <?=$Vehicles_promo['value']?></span>
 </div></a>
 			
 					<?php endforeach;?>
