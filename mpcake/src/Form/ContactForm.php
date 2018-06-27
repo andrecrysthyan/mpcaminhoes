@@ -35,13 +35,13 @@ return $validator->add('nome', 'length', [
 
 protected function _execute(array $data)
 {
-/*$email = new Email();
+$email = new Email();
 $email->profile('default');
 
-$email->from([$data['email']])
-->to('contato@nuvemdesenvolvimentoweb.com.br')
-->subject('Web Site Contact Form')
-->send([$data['body']]);*/
+$email->from('noreply@promovapatosdeminas.com.br')
+->to('contato@promovapatosdeminas.com.br')
+->subject('Formulário de contato do web site')
+->send($data);
 
 return true;
 }

@@ -45,7 +45,7 @@ class AppController extends Controller
     {
         $NewsTable = TableRegistry::get('News');
         $CategoriesTable = TableRegistry::get('Categories');
-        $news = $NewsTable->find('all',['order'=>'id DESC','limit'=>3]);
+        $news = $NewsTable->find('all',['order'=>'id DESC','limit'=>2]);
         $categories = $CategoriesTable->find('all',['order'=>'title ASC']);
         $this->set(compact('news','categories'));
         

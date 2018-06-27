@@ -61,7 +61,7 @@
 		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
 					?> (34) 99889-5100 <?php 
 	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Eudes</p>
+					?></p>
 		<p><?php 
 		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
 					?> (34) 99238-1095 <?php 

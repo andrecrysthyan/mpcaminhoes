@@ -5,8 +5,98 @@
 ?>
 <div class="col-md-12 col-xs-12 retira-padding">
 
-	<?php 
-	 				echo $this->Html->image('04.jpg', ['title' => 'Mp Caminhoes', 'class' => 'animated pulse'])
+
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <?php 
+	 				echo $this->Html->image('04.jpg', ['title' => 'Mp Caminhoes'])
+					?>
+      <div class="carousel-caption">
+        <p><?php 
+	 				echo $this->Html->image('luz.png', ['title' => 'Mp Caminhoes', 'class' => 'farol'])
+					?>
+						<?php 
+	 				echo $this->Html->image('luz.png', ['title' => 'Mp Caminhoes', 'class' => 'farol2'])
+					?>
+					</p>
+
+		
+		<div class="col-md-6 blocos-slider">
+		<p class="preto col-md-12 col-xs-12 primeiro-titulo animated bounceInLeft write"></p>
+		<p class="laranja col-md-12 col-xs-12 animated bounceInRight segundo-titulo">Financie o seu caminhão</p>
+		<p class="branco col-md-12 col-xs-12 terceiro-titulo animated fadeInUp">A MP Caminhões e Carretas facilita ao máximo o seu financiamento para proporcionar parcelas que cabem no seu bolso.</p>
+		<p><div class="col-md-6 col-xs-12 laranja btn1 animated fadeInLeftBig"><?php echo $this->Html->link('VER VEÍCULOS', ['controller' => 'vehicles', 'action' => 'index']);?></div>
+			<div class="col-md-6 col-xs-12 preto btn2 animated fadeInRightBig"><?php echo $this->Html->link('FALE CONOSCO', ['controller' => 'contato', 'action' => 'index']);?></div></p>
+
+
+
+		</div>
+      </div>
+    </div>
+    <div class="item">
+       <?php 
+	 				echo $this->Html->image('02.jpg', ['title' => 'Mp Caminhoes'])
+					?>
+      <div class="carousel-caption">
+        <div class="col-md-6 blocos-slider">
+		<p class="preto col-md-12 col-xs-12 primeiro-titulo animated bounceInLeft write"></p>
+		<p class="laranja col-md-12 col-xs-12 animated bounceInRight segundo-titulo">Financie o seu caminhão</p>
+		<p class="branco col-md-12 col-xs-12 terceiro-titulo animated fadeInUp">A MP Caminhões e Carretas facilita ao máximo o seu financiamento para proporcionar parcelas que cabem no seu bolso.</p>
+		<p><div class="col-md-6 col-xs-12 laranja btn1 animated fadeInLeftBig"><?php echo $this->Html->link('VER VEÍCULOS', ['controller' => 'vehicles', 'action' => 'index']);?></div>
+			<div class="col-md-6 col-xs-12 preto btn2 animated fadeInRightBig"><?php echo $this->Html->link('FALE CONOSCO', ['controller' => 'contato', 'action' => 'index']);?></div></p>
+
+
+
+		</div>
+      </div>
+    </div>
+    <div class="item">
+       <?php 
+	 				echo $this->Html->image('07.jpg', ['title' => 'Mp Caminhoes'])
+					?>
+      <div class="carousel-caption">
+        <div class="col-md-6 blocos-slider">
+		<p class="preto col-md-12 col-xs-12 primeiro-titulo animated bounceInLeft write"></p>
+		<p class="laranja col-md-12 col-xs-12 animated bounceInRight segundo-titulo">Financie o seu caminhão</p>
+		<p class="branco col-md-12 col-xs-12 terceiro-titulo animated fadeInUp">A MP Caminhões e Carretas facilita ao máximo o seu financiamento para proporcionar parcelas que cabem no seu bolso.</p>
+		<p><div class="col-md-6 col-xs-12 laranja btn1 animated fadeInLeftBig"><?php echo $this->Html->link('VER VEÍCULOS', ['controller' => 'vehicles', 'action' => 'index']);?></div>
+			<div class="col-md-6 col-xs-12 preto btn2 animated fadeInRightBig"><?php echo $this->Html->link('FALE CONOSCO', ['controller' => 'contato', 'action' => 'index']);?></div></p>
+
+
+
+		</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+
+	<!--<?php 
+	 				echo $this->Html->image('04.jpg', ['title' => 'Mp Caminhoes', 'class' => 'animated pulse col-md-12 retira-padding'])
 					?>
 
 					<p><?php 
@@ -25,7 +115,7 @@
 		<p><div class="col-md-6 col-xs-12 laranja btn1 animated fadeInLeftBig"><?php echo $this->Html->link('VER VEÍCULOS', ['controller' => 'vehicles', 'action' => 'index']);?></div>
 			<div class="col-md-6 col-xs-12 preto btn2 animated fadeInRightBig"><?php echo $this->Html->link('FALE CONOSCO', ['controller' => 'contato', 'action' => 'index']);?></div></p>
 
-</div>
+</div>-->
 </div>
 
 <div class="container">
@@ -118,7 +208,9 @@ setInterval(function(){
 
 <script type="text/javascript">
 			$(function() {
-				$('#dg-container').gallery();
+				$('#dg-container').gallery({
+					autoplay	:	true
+				});
 			});
 		</script>
 

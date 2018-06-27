@@ -13,8 +13,8 @@
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <?= $this->Html->script(array('jquery.min', 'bootstrap', 'jquery.gallery', 'modernizr.custom.53451','aos')); ?>
-    <?= $this->Html->css(array('base.css', 'bootstrap-theme', 'bootstrap', 'bootstrap.css.map', 'bootstrap-theme.css.map', 'fontawesome','fontawesome-all', 'style-fonts','animate', 'style-slider', 'demo','aos','responsivo' )); ?>
+    <?= $this->Html->script(array('jquery.min', 'bootstrap', 'jquery.gallery', 'modernizr.custom.53451','aos','bootstrap-dropdownhover.min')); ?>
+    <?= $this->Html->css(array('base.css', 'bootstrap-theme', 'bootstrap', 'bootstrap.css.map', 'bootstrap-theme.css.map', 'fontawesome','fontawesome-all', 'style-fonts','animate', 'style-slider', 'demo','aos','responsivo','bootstrap-dropdownhover.min')); ?>
     <?= $this->Html->css('style.css') ?>
 
     <?= $this->fetch('meta') ?>

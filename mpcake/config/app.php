@@ -9,7 +9,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => 1,
+    'debug' => 0,
 
     /**
      * Configure basic information about the application.
@@ -198,10 +198,10 @@ return [
         'default' => [
             'className' => 'Smtp',
             // The following keys are used in SMTP transports
-            'host' => 'smtp.nuvemdesenvolvimentoweb.com.br',
+            'host' => 'smtp.promovapatosdeminas.com.br',
             'port' => 587,
             'timeout' => 30,
-            'username' => 'noreply@nuvemdesenvolvimentoweb.com.br',
+            'username' => 'noreply@promovapatosdeminas.com.br',
             'password' => 'nuvem@prime',
             'client' => null,
             'tls' => null,
@@ -226,7 +226,7 @@ return [
     'Email' => [
         'default' => [
             'transport' => 'default',
-            'from' => 'noreply@nuvemdesenvolvimentoweb.com.br',
+            'from' => 'noreply@promovapatosdeminas.com.br',
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],

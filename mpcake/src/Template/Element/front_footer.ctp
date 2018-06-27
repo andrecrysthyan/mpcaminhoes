@@ -48,18 +48,53 @@ function showReadMore($string){
 </div>
 
 <div class="col-md-12 col-xs-12 retira-padding itens-footer">
-	<div class="container">
-	<div class="col-md-4 col-xs-12 instagram-footer" data-aos="zoom-in">
+	<div class="container-fluid">
+	<div class="col-md-3 col-xs-12 instagram-footer" data-aos="zoom-in">
 		<?php 
-	 				echo $this->Html->image('instagram.png', ['title' => 'Instagram'])
+	 				echo $this->Html->image('insta.png', ['title' => 'Instagram'])
 					?>
 		<span>Siga no instagram</span>
 		<!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/72ea0c5fcae3556b949518ca32b76fe9.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 
 
 	</div>
+
+	<div class="col-md-3 onde-estamos" data-aos="zoom-in">
+		<h2>Onde estamos</h2>
+		<i class="fas fa-map-marker-alt " aria-hidden="true"></i><span>Av. Juscelino Kubitschek de Oliveira 4470 Planalto Patos de Minas / MG</span>
+		<p><i class="fas fa-phone" aria-hidden="true"></i><span class="estilo-phone">(34) 3821-5100 Fixo</span></p>
+		<p><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats icone-whats-2'])
+					?> (34) 99886-5100 <?php 
+	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
+					?> | Júnior</p>
+		<p><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats icone-whats-2'])
+					?> (34) 99888-5100 <?php 
+	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
+					?> | Murilo</p>
+		<p><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats icone-whats-2'])
+					?> (34) 99908-0850 <?php 
+	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
+					?> | Luís Henrique</p>
+		<p><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats icone-whats-2'])
+					?> (34) 99889-5100 <?php 
+	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
+					?></p>
+		<p><?php 
+		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats icone-whats-2'])
+					?> (34) 99238-1095 <?php 
+	 				echo $this->Html->image('tim.png', ['title' => 'Tim'])
+					?> | Televendas</p>
+		<p>Converse com um de nossos consultores</p>
+		<i class="fas fa-envelope" aria-hidden="true"></i><span>contato@mpcaminhoes.com.br</span>
+	</div>
+
+
 	
-	<div class="col-md-4 col-xs-12 noticias-transporte" data-aos="zoom-in">
+	<div class="col-md-3 col-xs-12 noticias-transporte" data-aos="zoom-in">
 
 		<h2>Notícias do transporte</h2>
 		<?php foreach ($news as $news): ?>
@@ -75,7 +110,7 @@ function showReadMore($string){
 	 				//echo $this->Html->image('<?= h($news->image) ?>', ['title' => 'Economizar gasolina', 'class' => 'col-md-6 retira-padding'])
 					?>--></figure>
 			<figcaption><span class="col-md-6 col-xs-12"><?= h($news->title) ?></span>
-				<p class="col-md-6 col-xs-12"><?= showReadMore($news->description) ?></p></figcaption></a></p></div>
+				<p class="col-md-12 col-xs-12"><?= showReadMore($news->description) ?></p></figcaption></a></p></div>
 		<?php endforeach; ?>
 
 		<!--<p><figure><?php 
@@ -84,9 +119,9 @@ function showReadMore($string){
 			<figcaption><span class="col-md-6 retira-padding">DÁ PARA ENGANAR O TESTE DO BAFÔMETRO?</span>
 				<p class="col-md-12 retira-padding">Tomar vinagre, usar antisséptico bucal ou comer chiclete não livra o motorista de resultado positivo no etilômetro.</p></figcaption></p>-->
 	</div>
-	<div class="col-md-4 col-xs-12 face-footer" data-aos="zoom-in">
+	<div class="col-md-3 col-xs-12 face-footer" data-aos="zoom-in">
 		<?php 
-	 				echo $this->Html->image('facebook.png', ['title' => 'Facebook'])
+	 				echo $this->Html->image('face.png', ['title' => 'Facebook'])
 					?>
 		<span>Siga no facebook</span>
 
@@ -98,12 +133,12 @@ function showReadMore($string){
 <div class="col-md-12 col-xs-12 rodape retira-padding">
 	<div class="col-md-3 col-xs-12 logo-rodape-margin">
 		<?php 
-	 				echo $this->Html->image('logo-rodape.png', ['title' => 'Mp Caminhoes', 'class' => 'animated pulse'])
+	 				echo $this->Html->image('logomp.gif', ['title' => 'Mp Caminhoes'])
 					?>
 	</div>
 
 
-	<div class="col-md-6 col-xs-12 onde-estamos">
+	<!--<div class="col-md-6 col-xs-12 onde-estamos">
 		<h2>Converse com um de nossos consultores</h2>
 		
 		<div class="col-md-12 col-xs-12">
@@ -132,7 +167,7 @@ function showReadMore($string){
 		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
 					?> (34) 99889-5100 <?php 
 	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Eudes</a></p>
+					?></a></p>
 		<p><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5534992381095" target="_blank"><?php 
 		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
 					?> (34) 99238-1095 <?php 
@@ -140,9 +175,9 @@ function showReadMore($string){
 					?> | Televendas</a></p>
 		</div>
 		
-	</div>
+	</div>-->
 
-	<div class="col-md-3 col-xs-12 seta-topo">
+	<div class="col-md-3 col-md-offset-6 col-xs-12 seta-topo">
 		<a href="#" class=”voltar-ao-topo”><i class="fas fa-chevron-circle-up fa-4x"></i></a>
 
 		<!--Start of Tawk.to Script-->
@@ -161,12 +196,19 @@ s0.parentNode.insertBefore(s1,s0);
 	</div>
 
 
-	<div class="col-md-12 col-xs-12 endereco-rodape">
+	<div class="col-md-3 col-md-offset-3 col-xs-12 endereco-rodape">
 		Av. Juscelino Kubitschek de Oliveira 4470 Planalto
 Patos de Minas / MG
 	</div>
 	
 
+</div>
+<div class="col-md-12 col-xs-12 retira-padding faixa-laranja-footer">
+	<div class="container">
+<i class="fas fa-user-lock icone-admin"><?php echo $this->Html->link('entrar', ['controller' => 'admin/users', 'action' => 'index'], ['class' => 'entrar-admin']);?></i>
+
+
+	</div>
 </div>
 
 <script type="text/javascript">

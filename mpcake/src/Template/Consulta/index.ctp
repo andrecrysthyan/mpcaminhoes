@@ -3,7 +3,7 @@
 		<h2>Consulta Infração/Multa/Impedimento/Licenciamento - DETRAN MG </h2>
 		<h3>Detrans do Brasil</h3>
 
-		<div class="col-md-3">
+		<div class="col-md-3 consultas-colunas">
 			<ul>
 				<a href="http://www.detran.ac.gov.br/" target="_blank"><li>DETRAN - Acre</li></a>
 				<a href="http://www.detran.al.gov.br/" target="_blank"><li>DETRAN - Alagoas</li></a>
@@ -15,7 +15,7 @@
 				
 			</ul>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-3 consultas-colunas">
 			<ul>
 			<a href="http://www.detran.es.gov.br/" target="_blank"><li>DETRAN - Espírito Santo</li></a>
 			<a href="http://www.detran.go.gov.br/" target="_blank"><li>DETRAN - Goiás</li></a>
@@ -28,7 +28,7 @@
 			
 		</div>
 
-		<div class="col-md-3">
+		<div class="col-md-3 consultas-colunas">
 			<ul>
 			<a href="http://www.detran.pb.gov.br/" target="_blank"><li>DETRAN - Paraíba</li></a>
 			<a href="http://www.detran.pe.gov.br/" target="_blank"><li>DETRAN - Pernambuco</li></a>
@@ -41,7 +41,7 @@
 		</ul>
 		</div>
 
-		<div class="col-md-3">
+		<div class="col-md-3 consultas-colunas">
 			<ul>
 			<a href="http://www.detran.ro.gov.br/" target="_blank"><li>DETRAN - Rondônia</li></a>
 			<a href="http://www.detran.rr.gov.br/" target="_blank"><li>DETRAN - Roraima</li></a>
@@ -56,19 +56,19 @@
 			<h2>Órgãos Governamentais</h2>
 		</div>
 
-		<div class="col-md-4">
+		<div class="col-md-4 consultas-colunas">
 			<ul>
 				<a href="http://www.denatran.gov.br/contran.htm" target="_blank"><li>CONTRAN - Conselho Nacional de Transito</li></a>
 				<a href="http://www.dprf.gov.br/" target="_blank"><li>DPRF - Departamento de Polícia Rodoviária Federal</li></a>
 			</ul>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 consultas-colunas">
 			<ul>
 				<a href="http://www.transportes.gov.br/" target="_blank"><li>MT - Ministério dos Transportes</li></a>
 				<a href="http://www.dnit.gov.br/" target="_blank"><li>DNIT - Departamento Nacional de Infra-Estrutura de Transportes</li></a>
 			</ul>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 consultas-colunas">
 			<ul>
 				<a href="http://www.antt.gov.br/" target="_blank"><li>ANTT - Agência Nacional de Transportes Terrestres</li></a>
 				

@@ -1,12 +1,12 @@
 <div class="col-md-12 col-xs-12 retira-padding faixa-laranja-header">
 	<div class="container">
-<i class="fas fa-user-lock icone-admin"><?php echo $this->Html->link('entrar', ['controller' => 'admin/users', 'action' => 'index'], ['class' => 'entrar-admin']);?></i>
+
 
 
 	</div>
 </div>
 <div class="fundo-header col-md-12 col-xs-12">
-	<div class="container">
+	<div class="container-fluid">
 		<div class="col-md-12 col-xs-12 retira-padding conteudo-header">
 			<div class="col-md-4 col-xs-12 retira-padding">
 				<?php 
@@ -25,35 +25,35 @@
 		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
 					?> (34) 99886-5100 <?php 
 	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Júnior</a></p>
+					?></a></p>
 						<p><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5534999080850" target="_blank"><?php 
 		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
 					?> (34) 99908-0850 <?php 
 	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Luís Henrique</a></p>
+					?></a></p>
 					</div>
 					<div class="col-md-6 col-xs-6 operadora-header">
 						<p><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5534998895100" target="_blank"><?php 
 		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
 					?> (34) 99889-5100 <?php 
 	 				echo $this->Html->image('vivo.png', ['title' => 'Vivo'])
-					?> | Eudes</a></p>
+					?></a></p>
 						<p><a href="http://api.whatsapp.com/send?1=pt_BR&phone=5534992381095" target="_blank"><?php 
 		 			echo $this->Html->image('whatsapp-icone.png', ['title' => 'WhatsApp', 'class' => 'icone-whats-2'])
 					?> (34) 99238-1095 <?php 
 	 				echo $this->Html->image('tim.png', ['title' => 'Tim'])
-					?> | Televendas</a></p>
+					?></a></p>
 					</div>
 				</div>
 				<div class="col-md-3 col-xs-12 retira-padding icones-redes-sociais">
 					<a href="https://www.facebook.com/mpcaminhoes/" target="_blank"><?php 
-	 				echo $this->Html->image('facebook.png', ['title' => 'Facebook'])
+	 				echo $this->Html->image('face.png', ['title' => 'Facebook'])
 					?></a>
 					<a href="https://www.instagram.com/mp_caminhoes_carretas/" target="_blank"><?php 
-	 				echo $this->Html->image('instagram.png', ['title' => 'Instagram'])
+	 				echo $this->Html->image('insta.png', ['title' => 'Instagram'])
 					?></a>
 					<a href="https://www.youtube.com/channel/UCi4ScnYyuiY67IPhczF6SwA/featured" target="_blank"><?php 
-	 				echo $this->Html->image('youtube.png', ['title' => 'Youtube'])
+	 				echo $this->Html->image('you.png', ['title' => 'Youtube'])
 					?></a>
 				</div>
 				
@@ -73,24 +73,24 @@
 	        			</div>	
 	        			<div class="collapse navbar-collapse" id="navbar">
 	            			<ul class="nav navbar-nav">
-	                			<li><?php echo $this->Html->link('Home', ['controller' => 'pages', 'action' => 'home'], ['class' => 'button-hover hover-bootom']);?>
+	                			<li><?php echo $this->Html->link('Home', ['controller' => 'pages', 'action' => 'home']);?>
 	                			<li class="dropdown">
-          							<a href="" class="dropdown-toggle button-hover hover-bootom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estoques<span class="caret"></span></a>
+          							<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" data-hover="dropdown" data-animations="rotateInDownRight">Estoque<span class="caret"></span></a>
 					    			<ul class="dropdown-menu">
 					    				<?php foreach($categories as $category):?>
-					        			<li><a href="<?=$this->Url->build(['controller'=>'vehicles','action'=>'by_categoy',$category['id']])?>" class="tamanho-drop button-hover hover-bootom"><?=$category['title']?></a></li>
+					        			<li><a href="<?=$this->Url->build(['controller'=>'vehicles','action'=>'by_categoy',$category['id']])?>" class="tamanho-drop"><?=$category['title']?></a></li>
 					        			<?php endforeach;?>
 					   				</ul>
         						</li>	
-	                			<li><?php echo $this->Html->link('empresa', ['controller' => 'empresa', 'action' => 'index'], ['class' => 'button-hover hover-bootom']);?></li>
+	                			<li><?php echo $this->Html->link('empresa', ['controller' => 'empresa', 'action' => 'index']);?><div class="efeito"></div></li>
 	                			<li class="dropdown">
-          							<a href="" class="dropdown-toggle button-hover hover-bootom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Financiamentos<span class="caret"></span></a>
+          							<a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" data-hover="dropdown" data-animations="rotateInDownRight">Financiamentos<span class="caret"></span></a>
 					    			<ul class="dropdown-menu">
-					        			<li><?php echo $this->Html->link('consórcios', ['controller' => 'consorcio', 'action' => 'index'], ['class' => 'tamanho-drop button-hover hover-bootom']);?></li>
+					        			<li><?php echo $this->Html->link('consórcios', ['controller' => 'consorcio', 'action' => 'index'], ['class' => 'tamanho-drop']);?></li>
 					    			</ul>
         						</li>	
-	                			<li><?php echo $this->Html->link('consultas', ['controller' => 'consulta', 'action' => 'index'], ['class' => 'button-hover hover-bootom']);?></li>
-	                			<li><?php echo $this->Html->link('contato', ['controller' => 'contato', 'action' => 'index'], ['class' => 'button-hover hover-bootom']);?></li>	
+	                			<li><?php echo $this->Html->link('consultas', ['controller' => 'consulta', 'action' => 'index']);?></li>
+	                			<li><?php echo $this->Html->link('contato', ['controller' => 'contato', 'action' => 'index']);?></li>	
 	            			</ul>
 	        			</div>	             
 	    			</nav>
