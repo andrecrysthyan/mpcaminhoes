@@ -36,12 +36,10 @@
 		<p class="laranja col-md-12 col-xs-12 animated bounceInRight segundo-titulo">Financie o seu caminhão</p>
 		<p class="branco col-md-12 col-xs-12 terceiro-titulo animated fadeInUp">A MP Caminhões e Carretas facilita ao máximo o seu financiamento para proporcionar parcelas que cabem no seu bolso.</p>
 		<p><div class="col-md-6 col-xs-12 laranja btn1 animated fadeInLeftBig"><?php echo $this->Html->link('VER VEÍCULOS', ['controller' => 'vehicles', 'action' => 'index']);?></div>
+			
 			<div class="col-md-6 col-xs-12 preto btn2 animated fadeInRightBig"><?php echo $this->Html->link('FALE CONOSCO', ['controller' => 'contato', 'action' => 'index']);?></div></p>
-
-
-
 		</div>
-      </div>
+	</div>
     </div>
     <div class="item">
        <?php 

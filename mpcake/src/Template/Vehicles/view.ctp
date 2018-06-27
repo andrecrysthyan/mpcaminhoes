@@ -22,7 +22,7 @@
 				          }
 				          ?>
 						<div class="col-md-3 bloco-mini-veiculos-view">
-							<a class="fancybox-thumb" title="<?php echo $vehicle->name ?>" rel="fancybox-thumb" href="<?php echo $this->request->webroot;?>files/ImagesVehicle/image/croped-<?php echo $image->image ?>") ?><?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$image->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?></a>
+							<a class="fancybox-thumb" title="<?php echo $vehicle->name ?>" rel="fancybox-thumb" href="<?php echo $this->request->webroot;?>files/ImagesVehicle/image/<?php echo $image->image ?>") ?><?php echo $this->Html->image("/files/ImagesVehicle/image/croped-{$image->image}", ['title' => $vehicle->name,'class' => 'img-responsive']) ?></a>
 						</div>
 					<?php ++$x;}?>
 			<?php endforeach;?>

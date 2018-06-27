@@ -42,6 +42,7 @@ class Vehicle extends Entity
         'image' => true,
         'details' => true,
         'category_id' => true,
+        'marca_id' => true,
         'created' => true,
         'modified' => true,
         'category' => true,

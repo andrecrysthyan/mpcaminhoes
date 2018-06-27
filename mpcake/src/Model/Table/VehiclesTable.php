@@ -87,6 +87,10 @@ class VehiclesTable extends Table
             'foreignKey' => 'category_id',
             'joinType' => 'INNER'
         ]);
+        $this->belongsTo('Marcas', [
+            'foreignKey' => 'marca_id',
+            'joinType' => 'INNER'
+        ]);
         $this->hasMany('ImagesVehicle', [
             'foreignKey' => 'vehicle_id'
         ]);
@@ -163,6 +167,7 @@ class VehiclesTable extends Table
     public function buildRules(RulesChecker $rules)
     {
         $rules->add($rules->existsIn(['category_id'], 'Categories'));
+        $rules->add($rules->existsIn(['marca_id'], 'Marcas'));
 
         return $rules;
     }
